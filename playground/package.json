@@ -11,7 +11,6 @@
   "dependencies": {
     "vue": "^3.2.37",
     "@paxton-utils/shared": "workspace:*",
-    "@paxton-utils/use-chart": "workspace:*",
     "@paxton-utils/default-export-resolver": "workspace:*"
   },
   "devDependencies": {
