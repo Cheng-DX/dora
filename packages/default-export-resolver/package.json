@@ -3,16 +3,21 @@
   "type": "module",
   "version": "0.1.1",
   "packageManager": "pnpm@7.13.0",
-  "description": "",
+  "description": "Help to generate default export for `unplugin-vue-components`",
   "author": "Cheng-DX",
   "license": "MIT",
-  "homepage": "https://github.com/Cheng-DX/@chengdx/default-export-resolver#readme",
+  "homepage": "https://github.com/Cheng-DX/utils/tree/main/packages/default-export-resolver#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheng-DX/@chengdx/default-export-resolver.git"
+    "url": "git+https://github.com/Cheng-DX/utils.git"
   },
-  "bugs": "https://github.com/Cheng-DX/@chengdx/default-export-resolver/issues",
-  "keywords": [],
+  "keywords": [
+    "unplugin-vue-components",
+    "plugin",
+    "export",
+    "default",
+    "vite"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
@@ -47,17 +52,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
-    "@antfu/ni": "^0.18.0",
-    "@antfu/utils": "^0.5.2",
-    "@types/node": "^18.7.18",
-    "bumpp": "^8.2.1",
     "eslint": "^8.23.1",
-    "esno": "^0.16.3",
     "pnpm": "^7.13.0",
-    "rimraf": "^3.0.2",
     "typescript": "^4.8.3",
     "unbuild": "^0.8.11",
-    "vite": "^3.1.2",
     "vitest": "^0.23.4"
   }
 }
