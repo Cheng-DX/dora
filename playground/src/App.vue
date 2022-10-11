@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useChart } from '@paxton-utils/shared'
+
 </script>
 
 <template>

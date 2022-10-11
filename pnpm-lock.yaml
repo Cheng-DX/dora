@@ -7,9 +7,9 @@ importers:
       '@antfu/eslint-config': ^0.27.0
       '@antfu/ni': ^0.18.0
       '@antfu/utils': ^0.5.2
-      '@paxton-utils/default-export-resolver': workspace:*
-      '@paxton-utils/shared': workspace:*
-      '@paxton-utils/use-chart': workspace:*
+      '@chengdx/default-export-resolver': workspace:*
+      '@chengdx/shared': workspace:*
+      '@chengdx/use-chart': workspace:*
       '@types/node': ^18.7.18
       bumpp: ^8.2.1
       eslint: ^8.23.1
@@ -21,9 +21,9 @@ importers:
       vite: ^3.1.2
       vitest: ^0.23.4
     dependencies:
-      '@paxton-utils/default-export-resolver': link:packages/default-export-resolver
-      '@paxton-utils/shared': link:packages/shared
-      '@paxton-utils/use-chart': link:packages/use-chart
+      '@chengdx/default-export-resolver': link:packages/default-export-resolver
+      '@chengdx/shared': link:packages/shared
+      '@chengdx/use-chart': link:packages/use-chart
     devDependencies:
       '@antfu/eslint-config': 0.27.0_irgkl5vooow2ydyo6aokmferha
       '@antfu/ni': 0.18.0
@@ -104,7 +104,7 @@ importers:
       '@antfu/eslint-config': ^0.27.0
       '@antfu/ni': ^0.18.0
       '@antfu/utils': ^0.5.2
-      '@paxton-utils/shared': workspace:../shared
+      '@chengdx/shared': workspace:../shared
       '@types/echarts': ^4.9.16
       '@types/node': ^18.7.18
       '@vue/reactivity': ^3.2.40
@@ -120,7 +120,7 @@ importers:
       vite: ^3.1.2
       vitest: ^0.23.4
     dependencies:
-      '@paxton-utils/shared': link:../shared
+      '@chengdx/shared': link:../shared
       '@types/echarts': 4.9.16
       '@vue/reactivity': 3.2.40
       '@vueuse/core': 9.3.0
@@ -142,18 +142,18 @@ importers:
 
   playground:
     specifiers:
-      '@paxton-utils/default-export-resolver': workspace:*
-      '@paxton-utils/shared': workspace:*
-      '@paxton-utils/use-chart': workspace:*
+      '@chengdx/default-export-resolver': workspace:*
+      '@chengdx/shared': workspace:*
+      '@chengdx/use-chart': workspace:*
       '@vitejs/plugin-vue': ^3.1.0
       typescript: ^4.6.4
       vite: ^3.1.0
       vue: ^3.2.37
       vue-tsc: ^0.40.4
     dependencies:
-      '@paxton-utils/default-export-resolver': link:../packages/default-export-resolver
-      '@paxton-utils/shared': link:../packages/shared
-      '@paxton-utils/use-chart': link:../packages/use-chart
+      '@chengdx/default-export-resolver': link:../packages/default-export-resolver
+      '@chengdx/shared': link:../packages/shared
+      '@chengdx/use-chart': link:../packages/use-chart
       vue: 3.2.40
     devDependencies:
       '@vitejs/plugin-vue': 3.1.2_vite@3.1.2+vue@3.2.40

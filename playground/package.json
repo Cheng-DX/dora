@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "vue": "^3.2.37",
-    "@paxton-utils/shared": "workspace:*",
-    "@paxton-utils/default-export-resolver": "workspace:*"
+    "@chengdx/shared": "workspace:*",
+    "@chengdx/default-export-resolver": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",

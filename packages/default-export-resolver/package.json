@@ -1,17 +1,17 @@
 {
-  "name": "@paxton-utils/default-export-resolver",
+  "name": "@chengdx/default-export-resolver",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "packageManager": "pnpm@7.13.0",
   "description": "",
   "author": "Cheng-DX",
   "license": "MIT",
-  "homepage": "https://github.com/Cheng-DX/@paxton-utils/default-export-resolver#readme",
+  "homepage": "https://github.com/Cheng-DX/@chengdx/default-export-resolver#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheng-DX/@paxton-utils/default-export-resolver.git"
+    "url": "git+https://github.com/Cheng-DX/@chengdx/default-export-resolver.git"
   },
-  "bugs": "https://github.com/Cheng-DX/@paxton-utils/default-export-resolver/issues",
+  "bugs": "https://github.com/Cheng-DX/@chengdx/default-export-resolver/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {

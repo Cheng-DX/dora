@@ -1,7 +1,7 @@
 {
-  "name": "utils",
+  "name": "@paxton/utils",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@7.13.4",
   "description": "",
@@ -40,9 +40,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@paxton-utils/shared": "workspace:*",
-    "@paxton-utils/default-export-resolver": "workspace:*",
-    "@paxton-utils/use-chart": "workspace:*"
+    "@chengdx/shared": "workspace:*",
+    "@chengdx/default-export-resolver": "workspace:*",
+    "@chengdx/use-chart": "workspace:*"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
