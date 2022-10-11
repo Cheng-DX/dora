@@ -1,20 +1,26 @@
 {
-  "name": "utils",
+  "name": "@paxton-utils/default-export-resolver",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
-  "packageManager": "pnpm@7.13.4",
+  "packageManager": "pnpm@7.13.0",
   "description": "",
   "author": "Cheng-DX",
   "license": "MIT",
-  "homepage": "https://github.com/Cheng-DX/utils#readme",
+  "homepage": "https://github.com/Cheng-DX/@paxton-utils/default-export-resolver#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheng-DX/utils.git"
+    "url": "git+https://github.com/Cheng-DX/@paxton-utils/default-export-resolver.git"
   },
-  "bugs": "https://github.com/Cheng-DX/utils/issues",
+  "bugs": "https://github.com/Cheng-DX/@paxton-utils/default-export-resolver/issues",
   "keywords": [],
   "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -30,7 +36,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm -r run build",
+    "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
@@ -38,11 +44,6 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@paxton-utils/shared": "workspace:*",
-    "@paxton-utils/default-export-resolver": "workspace:*",
-    "@paxton-utils/use-chart": "workspace:*"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
