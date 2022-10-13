@@ -1,6 +1,7 @@
+import type { Ref } from 'vue'
 import { useLocalStorage, useToggle } from '@vueuse/core'
 
-const darkmode = useLocalStorage(
+const darkmode: Ref<boolean> = useLocalStorage(
   'ls_value_from_@chengdx/composables/darkmode',
   false,
   { mergeDefaults: true },
