@@ -1,5 +1,5 @@
 import { assert, describe, it } from 'vitest'
-import type { MaybeCallable } from '../../dist'
+import type { MaybeCallable } from '.'
 import { resolveCallable } from '.'
 
 describe('maybeCallable', () => {

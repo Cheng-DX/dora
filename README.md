@@ -6,13 +6,12 @@
 
 <h1 align="center">@chengdx/utils</h1>
 
-<p align="center">My tools</p>
+<p align="center">Make a script for everything did more than once</p>
 
-<!-- PLAYGROUND -->
-<p align="center"><a href="">Make a script for everything did more than once</a></p>
-<br>
+## Tools
+- [compoables](./packages/composables/README.md)
+- [default-export-resolver](./packages/default-export-resolver/README.md)
+- [shared](./packages/shared/README.md)
 
-## Usage
-see packages/**/README.md
 
 [MIT](./LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)

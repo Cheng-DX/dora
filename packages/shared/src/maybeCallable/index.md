@@ -7,7 +7,7 @@ import { type MaybeCallable, resolveCallable } from '@chengdx/shared'
 
 // without arguments
 const a: MaybeCallable<string> = 'a'
-const b: MaybeCallable<string> = () => 'b'
+const b = () => 'b'
 
 const resolvedA = resolveCallable(a) // resolvedA = 'a'
 const resolvedB = resolveCallable(b) // resolvedB = 'b'
