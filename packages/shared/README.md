@@ -1,20 +1,10 @@
-<br>
+## `MaybeCallable`
+- `MaybeCallable` is a type that represents a function or a value.
+- `resolveCallable` is a function that consumes a `MaybeCallable` and returns the value.
 
-<p align="center">
-<img src=""/>
-</p>
-
-<h1 align="center"></h1>
-
-<p align="center"></p>
-
-<!-- PLAYGROUND -->
-<p align="center"><a href="">Online Playground</a></p>
-<br>
-
-## Features
-
-## Usage
+## createArray
+- Use `Array.from` to create an array with the length.
+- Use `mapFn` to fill array
 
 ## License
 
