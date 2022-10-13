@@ -1,11 +1,17 @@
-## `MaybeCallable`
-- `MaybeCallable` is a type that represents a function or a value.
-- `resolveCallable` is a function that consumes a `MaybeCallable` and returns the value.
+## shared
 
-## createArray
-- Use `Array.from` to create an array with the length.
-- Use `mapFn` to fill array
+> some useful utils
+- Tree shakable 🌲
+- TypeScript 🦕
 
-## License
+### install
+```sh
+npm install @chengdx/shared
+```
 
+### utils
+- [MaybeCallable](./src/maybeCallable/index.md)
+- [createArray](./src/createArray/index.md)
+
+### License
 [MIT](./LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)
