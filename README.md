@@ -15,9 +15,10 @@
 - [use-echarts](./packages/use-echarts/README.md): composable functions for creating an reactive echart instance in Vuejs.
 - [naive-ui](./packages/naive-ui/README.md): naive-ui tools
 
-## Install
+## Install (Why not try [ni](https://github.com/antfu/ni))
 ```sh
 npm install @chengdx/[package-name]
 ```
+
 
 [MIT](./LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)
