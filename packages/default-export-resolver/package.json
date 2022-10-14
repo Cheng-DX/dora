@@ -1,7 +1,7 @@
 {
   "name": "@chengdx/default-export-resolver",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "packageManager": "pnpm@7.13.0",
   "description": "Help to generate default export for `unplugin-vue-components`",
   "author": "Cheng-DX",
