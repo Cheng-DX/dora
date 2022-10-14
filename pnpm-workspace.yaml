@@ -1,4 +1,2 @@
 packages:
-  - packages/shared
-  - packages/default-export-resolver
-  - packages/composables
+  - packages/*

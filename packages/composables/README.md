@@ -3,6 +3,7 @@
 - Tree shakable 🌲
 - TypeScript 🦕
 - [auto-import plugin support](./src/autoImportPresets/index.md)
+- No extro dependencies 🚀
 
 ### install
 ```sh
