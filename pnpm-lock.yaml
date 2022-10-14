@@ -122,7 +122,7 @@ importers:
   packages/use-echarts:
     specifiers:
       '@antfu/eslint-config': ^0.27.0
-      '@chengdx/shared': workspace:shared
+      '@chengdx/shared': workspace:*
       defu: ^6.1.0
       echarts: ^5.4.0
       eslint: ^8.23.1
@@ -132,10 +132,10 @@ importers:
       vitest: ^0.23.4
       vue: ^3.2.40
     dependencies:
+      '@chengdx/shared': link:../shared
       defu: 6.1.0
     devDependencies:
       '@antfu/eslint-config': 0.27.0_irgkl5vooow2ydyo6aokmferha
-      '@chengdx/shared': link:../shared
       echarts: 5.4.0
       eslint: 8.23.1
       pnpm: 7.13.2
