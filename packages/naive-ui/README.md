@@ -13,6 +13,7 @@ npm install @chengdx/naive-ui
 
 ### functions
 - [renderIcon](./src/renderIcon/index.md)
+- [createMenu](./src/createMenu/index.md)
 
 
 ## License
