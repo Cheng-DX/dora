@@ -37,7 +37,8 @@
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "play": "cd playground && nr dev"
   },
   "dependencies": {
     "@chengdx/default-export-resolver": "workspace:*",

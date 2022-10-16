@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "~/*": ["src/*"]
+    },
+    "lib": ["ESNext","dom", "dom.iterable", "scripthost"],
+    "skipLibCheck": true,
+    "allowJs": true,
+    "types": ["naive-ui/volar"]
+  },
+  "include": ["vite.config.*", "src/**/*", "src/**/*.vue", "test/**/*", "vitest.config.*", "*.d.ts" ]
+}
