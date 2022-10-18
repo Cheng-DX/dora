@@ -41,18 +41,18 @@
     "play": "cd playground && nr dev"
   },
   "dependencies": {
-    "@chengdx/default-export-resolver": "workspace:*",
-    "@chengdx/shared": "workspace:*",
-    "@chengdx/composables": "workspace:*",
-    "@chengdx/use-echarts": "workspace:*",
-    "@chengdx/naive-ui": "workspace:*"
+    "@chengdx/composables": "workspace:0.5.1",
+    "@chengdx/default-export-resolver": "workspace:0.5.1",
+    "@chengdx/naive-ui": "workspace:0.5.1",
+    "@chengdx/shared": "workspace:0.5.1",
+    "@chengdx/use-echarts": "workspace:0.5.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
     "@vitest/ui": "^0.24.1",
-    "eslint": "^8.23.1",
-    "pnpm": "^7.13.0",
-    "typescript": "^4.8.3",
+    "eslint": "^8.25.0",
+    "pnpm": "^7.13.5",
+    "typescript": "^4.8.4",
     "unbuild": "^0.8.11",
     "vitest": "^0.23.4"
   }
