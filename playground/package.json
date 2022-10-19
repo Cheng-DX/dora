@@ -1,6 +1,6 @@
 {
-  "name": "vue-ts",
-  "version": "0.1.2",
+  "name": "playground",
+  "version": "0.6.0",
   "packageManager": "pnpm@7.12.2",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,8 @@
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "publish": "echo palyground do nothing"
   },
   "dependencies": {
     "@chengdx/composables": "workspace:*",
