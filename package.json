@@ -1,7 +1,7 @@
 {
   "name": "@paxton/utils",
   "type": "module",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "private": true,
   "packageManager": "pnpm@7.13.4",
   "description": "",
@@ -41,12 +41,12 @@
     "play": "cd playground && nr dev"
   },
   "dependencies": {
-    "@chengdx/composables": "workspace:0.5.1",
-    "@chengdx/default-export-resolver": "workspace:0.5.1",
-    "@chengdx/naive-ui": "workspace:0.5.1",
-    "@chengdx/shared": "workspace:0.5.1",
-    "@chengdx/use-echarts": "workspace:0.5.1",
-    "@chengdx/maybe-ref": "workspace:0.5.1"
+    "@chengdx/composables": "workspace:0.6.0",
+    "@chengdx/default-export-resolver": "workspace:0.6.0",
+    "@chengdx/maybe-ref": "workspace:0.6.0",
+    "@chengdx/naive-ui": "workspace:0.6.0",
+    "@chengdx/shared": "workspace:0.6.0",
+    "@chengdx/use-echarts": "workspace:0.6.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
