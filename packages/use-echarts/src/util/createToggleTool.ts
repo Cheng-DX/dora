@@ -9,6 +9,8 @@ export function createToggleTool(
   title: MaybeCallable<string>,
   icon: MaybeCallable<string>,
 ): EChartsOption {
+  // custom tool must start with my
+  // see https://echarts.apache.org/option.html#toolbox.feature
   const resolvedName = name.startsWith('my')
     ? name
     : `my${name[0].toUpperCase()}${name.slice(1)}`
