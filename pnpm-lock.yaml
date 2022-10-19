@@ -7,6 +7,7 @@ importers:
       '@antfu/eslint-config': ^0.27.0
       '@chengdx/composables': workspace:0.5.1
       '@chengdx/default-export-resolver': workspace:0.5.1
+      '@chengdx/maybe-ref': workspace:0.5.1
       '@chengdx/naive-ui': workspace:0.5.1
       '@chengdx/shared': workspace:0.5.1
       '@chengdx/use-echarts': workspace:0.5.1
@@ -19,6 +20,7 @@ importers:
     dependencies:
       '@chengdx/composables': link:packages/composables
       '@chengdx/default-export-resolver': link:packages/default-export-resolver
+      '@chengdx/maybe-ref': link:packages/maybe-ref
       '@chengdx/naive-ui': link:packages/naive-ui
       '@chengdx/shared': link:packages/shared
       '@chengdx/use-echarts': link:packages/use-echarts
@@ -140,7 +142,7 @@ importers:
   packages/use-echarts:
     specifiers:
       '@antfu/eslint-config': ^0.27.0
-      '@chengdx/shared': workspace:0.5.1
+      '@chengdx/maybe-ref': workspace:0.5.1
       defu: ^6.1.0
       echarts: ^5.4.0
       eslint: ^8.25.0
@@ -150,7 +152,7 @@ importers:
       vitest: ^0.23.4
       vue: ^3.2.41
     dependencies:
-      '@chengdx/shared': link:../shared
+      '@chengdx/maybe-ref': link:../maybe-ref
       defu: 6.1.0
     devDependencies:
       '@antfu/eslint-config': 0.27.0_z4bbprzjrhnsfa24uvmcbu7f5q
@@ -375,9 +377,6 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
     dependencies:
       '@babel/compat-data': 7.19.4
       '@babel/core': 7.19.3
@@ -813,9 +812,6 @@ packages:
     engines: {node: '>= 12.0.0'}
     peerDependencies:
       rollup: ^2.68.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.79.1
       commondir: 1.0.1

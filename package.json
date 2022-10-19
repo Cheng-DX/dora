@@ -45,7 +45,8 @@
     "@chengdx/default-export-resolver": "workspace:0.5.1",
     "@chengdx/naive-ui": "workspace:0.5.1",
     "@chengdx/shared": "workspace:0.5.1",
-    "@chengdx/use-echarts": "workspace:0.5.1"
+    "@chengdx/use-echarts": "workspace:0.5.1",
+    "@chengdx/maybe-ref": "workspace:0.5.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",

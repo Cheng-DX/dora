@@ -1,5 +1,5 @@
-import type { MaybeComputedRef } from '@chengdx/shared'
-import { resolveRef, resolveUnref } from '@chengdx/shared'
+import type { MaybeComputedRef } from '@chengdx/maybe-ref'
+import { resolveRef, resolveUnref } from '@chengdx/maybe-ref'
 import { defu } from 'defu'
 import { computed } from 'vue'
 import type { EChartsOption } from 'echarts'

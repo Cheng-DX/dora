@@ -1,5 +1,5 @@
-import type { MaybeCallable } from '@chengdx/shared'
-import { resolveCallable } from '@chengdx/shared'
+import type { MaybeCallable } from '@chengdx/maybe-ref'
+import { resolveCallable } from '@chengdx/maybe-ref'
 import type { EChartsOption } from 'echarts'
 import type { Ref } from 'vue'
 
