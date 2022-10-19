@@ -45,7 +45,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@chengdx/maybe-ref": "workspace:0.5.1",
+    "@chengdx/maybe-ref": "workspace:0.6.0",
+    "@chengdx/shared": "workspace:0.6.0",
     "defu": "^6.1.0"
   },
   "devDependencies": {
