@@ -1,3 +1,5 @@
+import type { ComputedRef, Ref } from 'vue'
+
 /**
  * Maybe it's a ref, or a plain value
  *
