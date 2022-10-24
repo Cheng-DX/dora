@@ -1,7 +1,7 @@
 {
   "name": "@chengdx/naive-ui",
   "type": "module",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "packageManager": "pnpm@7.13.0",
   "description": "naive ui tools",
   "author": "Cheng-DX",

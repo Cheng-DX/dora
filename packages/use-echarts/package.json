@@ -1,7 +1,7 @@
 {
   "name": "@chengdx/use-echarts",
   "type": "module",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "packageManager": "pnpm@7.13.0",
   "description": "Composable echarts functions for Vue.js",
   "author": "Cheng-DX",
@@ -45,8 +45,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@chengdx/maybe-ref": "workspace:0.6.0",
-    "@chengdx/shared": "workspace:0.6.0",
+    "@chengdx/maybe-ref": "workspace:0.6.2",
+    "@chengdx/shared": "workspace:0.6.2",
     "defu": "^6.1.0"
   },
   "devDependencies": {
