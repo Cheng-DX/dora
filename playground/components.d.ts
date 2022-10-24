@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     NLayoutContent: typeof import('naive-ui')['NLayoutContent']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
+    NSelect: typeof import('naive-ui')['NSelect']
     NSpin: typeof import('naive-ui')['NSpin']
     NTag: typeof import('naive-ui')['NTag']
     RouterLink: typeof import('vue-router')['RouterLink']

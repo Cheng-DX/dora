@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import UseSelection from './UseSelection.vue'
 </script>
 
 <template>
-  vue-ts
+  <UseSelection />
 </template>
 
 <style scoped>
