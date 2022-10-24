@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "packageManager": "pnpm@7.12.2",
   "scripts": {
     "dev": "vite",
