@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "packageManager": "pnpm@7.12.2",
   "scripts": {
     "dev": "vite",
@@ -13,11 +13,11 @@
     "publish": "echo palyground do nothing"
   },
   "dependencies": {
-    "@chengdx/composables": "workspace:0.6.2",
-    "@chengdx/default-export-resolver": "workspace:0.6.2",
-    "@chengdx/naive-ui": "workspace:0.6.2",
-    "@chengdx/shared": "workspace:0.6.2",
-    "@chengdx/use-echarts": "workspace:0.6.2",
+    "@chengdx/composables": "workspace:0.6.3",
+    "@chengdx/default-export-resolver": "workspace:0.6.3",
+    "@chengdx/naive-ui": "workspace:0.6.3",
+    "@chengdx/shared": "workspace:0.6.3",
+    "@chengdx/use-echarts": "workspace:0.6.3",
     "@vueuse/core": "^9.3.1",
     "vue": "^3.2.41",
     "vue-router": "^4.1.5"
