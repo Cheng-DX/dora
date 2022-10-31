@@ -4,7 +4,7 @@ import { defu } from 'defu'
 import { computed } from 'vue'
 import type { EChartsOption } from 'echarts'
 import type { EChartOptionSeries } from '../types'
-import baseConfig from '../base/baseConfig'
+import baseConfig from '../base/base-config'
 
 export function useChart(
   series: MaybeComputedRef<EChartOptionSeries>,
