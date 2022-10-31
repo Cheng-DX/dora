@@ -5,12 +5,12 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.27.0
-      '@chengdx/composables': workspace:0.6.2
-      '@chengdx/default-export-resolver': workspace:0.6.2
-      '@chengdx/maybe-ref': workspace:0.6.2
-      '@chengdx/naive-ui': workspace:0.6.2
-      '@chengdx/shared': workspace:0.6.2
-      '@chengdx/use-echarts': workspace:0.6.2
+      '@chengdx/composables': workspace:*
+      '@chengdx/default-export-resolver': workspace:*
+      '@chengdx/maybe-ref': workspace:*
+      '@chengdx/naive-ui': workspace:*
+      '@chengdx/shared': workspace:*
+      '@chengdx/use-echarts': workspace:*
       '@vitest/ui': ^0.24.3
       eslint: ^8.26.0
       pnpm: ^7.14.0
@@ -143,8 +143,8 @@ importers:
   packages/use-echarts:
     specifiers:
       '@antfu/eslint-config': ^0.27.0
-      '@chengdx/maybe-ref': workspace:0.6.2
-      '@chengdx/shared': workspace:0.6.2
+      '@chengdx/maybe-ref': workspace:*
+      '@chengdx/shared': workspace:*
       defu: ^6.1.0
       echarts: ^5.4.0
       eslint: ^8.25.0
