@@ -1,8 +1,8 @@
 // auto import
-export { default as autoImportApi } from './autoImportPresets/api'
+export { default as autoImportApi } from './auto-import-presets/api'
 
-export { renderIcon } from './renderIcon'
+export { renderIcon } from './render-icon'
 
-export { createMenu } from './createMenu'
+export { createMenu } from './create-menu'
 
-export { useSelection } from './useSelection'
+export { useSelection } from './use-selection'

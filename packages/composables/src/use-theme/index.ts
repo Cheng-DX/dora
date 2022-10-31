@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { useDarkmode } from '../useDarkmode'
+import { useDarkmode } from '../use-darkmode'
 
 const { darkmode } = useDarkmode()
 

@@ -3,7 +3,7 @@
 
 - Tree shakable 🌲
 - TypeScript 🦕
-- [auto-import plugin support](./src/autoImportPresets/index.md)
+- [auto-import plugin support](./src/auto-import-presets/index.md)
 - No extro dependencies 🚀
 
 ### install
@@ -12,9 +12,9 @@ npm install @chengdx/naive-ui
 ```
 
 ### functions
-- [renderIcon](./src/renderIcon/index.md)
-- [createMenu](./src/createMenu/index.md)
-- [useSelection](./src/useSelection/index.md)
+- [renderIcon](./src/render-icon/index.md)
+- [createMenu](./src/create-menu/index.md)
+- [useSelection](./src/use-selection/index.md)
 
 ## License
 [MIT](./LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)

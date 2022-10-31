@@ -1,9 +1,3 @@
-export { useDarkmode } from './useDarkmode'
-export { useTheme } from './useTheme'
-export { autoImportPresets } from './autoImportPresets'
-
-export declare interface ApiMap {
-  'GET': {
-    '/api/user': string
-  }
-}
+export { useDarkmode } from './use-darkmode'
+export { useTheme } from './use-theme'
+export { autoImportPresets } from './auto-import-presets'

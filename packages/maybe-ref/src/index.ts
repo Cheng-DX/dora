@@ -4,5 +4,5 @@ export type {
   MaybeReadonlyRef,
 } from './types'
 
-export { resolveRef } from './resolveRef'
-export { resolveUnref } from './resolveUnref'
+export { resolveRef } from './resolve-ref'
+export { resolveUnref } from './resolve-unref'

@@ -1,7 +1,7 @@
-export type { MaybeCallable } from './maybeCallable'
-export { resolveCallable } from './maybeCallable'
+export type { MaybeCallable } from './maybe-callable'
+export { resolveCallable } from './maybe-callable'
 
-export { createArray } from './createArray'
+export { createArray } from './create-array'
 
-export type { MaybeArray } from './maybeArray'
-export { resolveArray } from './maybeArray'
+export type { MaybeArray } from './maybe-array'
+export { resolveArray } from './maybe-array'

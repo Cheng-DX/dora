@@ -10,8 +10,8 @@ npm install @chengdx/shared
 ```
 
 ### utils
-- [MaybeCallable](./src/maybeCallable/index.md)
-- [createArray](./src/createArray/index.md)
+- [MaybeCallable](./src/maybe-callable/index.md)
+- [createArray](./src/create-array/index.md)
 
 ### License
 [MIT](./LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)
