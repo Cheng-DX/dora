@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
-import AutoImportTypes from 'unplugin-auto-import-types/vite'
 import AutoImportComponents from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Inspect from 'vite-plugin-inspect'
@@ -29,7 +28,6 @@ export default defineConfig({
         'src/composables/**',
       ],
     }),
-    AutoImportTypes(),
     AutoImportComponents({
       dts: true,
       extensions: ['vue', 'ts', 'tsx'],
