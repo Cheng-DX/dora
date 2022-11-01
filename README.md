@@ -14,6 +14,7 @@
 - [shared](./packages/shared/README.md): shared utils
 - [use-echarts](./packages/use-echarts/README.md): composable functions for creating an reactive echart instance in Vuejs.
 - [naive-ui](./packages/naive-ui/README.md): naive-ui tools
+- [maybe-ref](./packages/maybe-ref/README.md): MaybeRef stuff
 
 ## Install (Why not try [ni](https://github.com/antfu/ni))
 ```sh
