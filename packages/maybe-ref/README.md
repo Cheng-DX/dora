@@ -3,7 +3,7 @@
 > All codes from [VueUse](https://github.com/vueuse/vueuse)
 
 <!-- FUNCTIONS START -->
-- [presets]
+- [presets](src/presets/index.md)
 - [resolveRef](src/resolve-ref/index.md)
 - [resolveUnref](src/resolve-unref/index.md)
 

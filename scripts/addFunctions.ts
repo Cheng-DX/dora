@@ -12,7 +12,7 @@ packages.forEach(async (pkg) => {
   const content = fs.readFileSync(`${url}/README.md`).toString()
   const dirs = fs.readdirSync(`${url}/src`).map((dir) => {
     const isDirectory = fs.statSync(`${url}/src/${dir}`).isDirectory()
-    return isDirectory && dir !== 'presets' ? formatNaming(dir, 'kebab').result : ''
+    return isDirectory ? formatNaming(dir, 'kebab').result : ''
   }).filter(dir => dir)
 
   const startTag = '<!-- FUNCTIONS START -->\n'
@@ -23,10 +23,10 @@ packages.forEach(async (pkg) => {
   const path = (func: string) => {
     const kebab = formatNaming(func, 'kebab').result
     return dirs.includes(kebab)
-      ? `(src/${kebab}/index.md)`
-      : ''
+      ? `- [${func}](src/${kebab}/index.md)`
+      : `- ${func}`
   }
-  const functions = `${exports.map(func => `- [${func}]${path(func)}`).join('\n')}\n`
+  const functions = `${exports.map(func => path(func)).join('\n')}\n`
   fs.writeFileSync(`${url}/README.md`, replaceSubstring(content, start, end, functions))
   consola.success(`Resolved ${pkg}`)
 })
