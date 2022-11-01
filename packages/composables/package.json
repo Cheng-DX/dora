@@ -44,6 +44,9 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@chengdx/shared": "workspace:*"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
     "@vueuse/core": "^9.3.0",
