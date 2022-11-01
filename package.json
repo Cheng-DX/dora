@@ -40,7 +40,8 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "play": "cd playground && nr dev",
-    "presets": "tsx ./scripts/generatePresets.ts"
+    "presets": "tsx ./scripts/generatePresets.ts",
+    "add-funs": "tsx ./scripts/addFunctions.ts"
   },
   "dependencies": {
     "@chengdx/composables": "workspace:*",
