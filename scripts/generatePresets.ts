@@ -1,15 +1,12 @@
 import fs from 'fs'
 import { getExportsRuntime } from 'pkg-exports'
 import consola from 'consola'
-import { dependencies } from '../package.json'
+import { getPackages } from './getPackages'
 
-const excludedPackages = ['@chengdx/default-export-resolver']
-const resolvedPackages = Object.keys(dependencies).filter(
-  pkg => !excludedPackages.includes(pkg),
-)
+const packages = getPackages(pkg => pkg !== '@chengdx/default-export-resolver')
 
-resolvedPackages.forEach(async (pkg) => {
-  const exports = await getExportsRuntime(pkg)
+packages.forEach(async (pkg) => {
+  const exports: string[] = await getExportsRuntime(pkg)
   fs.writeFileSync(
     `packages/${pkg.split('/').pop()}/src/presets/index.ts`,
     createPresetsObject(pkg, exports),
