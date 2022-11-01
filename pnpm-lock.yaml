@@ -12,7 +12,9 @@ importers:
       '@chengdx/shared': workspace:*
       '@chengdx/use-echarts': workspace:*
       '@vitest/ui': ^0.24.3
+      consola: ^2.15.3
       eslint: ^8.26.0
+      pkg-exports: ^0.1.2
       pnpm: ^7.14.0
       turbo: ^1.6.1
       typescript: ^4.8.4
@@ -28,7 +30,9 @@ importers:
     devDependencies:
       '@antfu/eslint-config': 0.27.0_wyqvi574yv7oiwfeinomdzmc3m
       '@vitest/ui': 0.24.3
+      consola: 2.15.3
       eslint: 8.26.0
+      pkg-exports: 0.1.2
       pnpm: 7.14.0
       turbo: 1.6.1
       typescript: 4.8.4
@@ -3923,6 +3927,14 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /pkg-exports/0.1.2:
+    resolution: {integrity: sha512-DNo5W2zrmwbRywhrQ54P3nUJ0Q6QOKDenWkC0YnqAWiqTJy6B64fjQqFar/dD3GsXbFPN9O1yOgLNR8cGcInbw==}
+    dependencies:
+      local-pkg: 0.4.2
+      mlly: 0.5.16
+      tinypool: 0.2.4
+    dev: true
+
   /pkg-types/0.3.5:
     resolution: {integrity: sha512-VkxCBFVgQhNHYk9subx+HOhZ4jzynH11ah63LZsprTKwPCWG9pfWBlkElWFbvkP9BVR0dP1jS9xPdhaHQNK74Q==}
     dependencies:
@@ -4312,6 +4324,11 @@ packages:
 
   /tinybench/2.3.0:
     resolution: {integrity: sha512-zs1gMVBwyyG2QbVchYIbnabRhMOCGvrwZz/q+SV+LIMa9q5YDQZi2kkI6ZRqV2Bz7ba1uvrc7ieUoE4KWnGeKg==}
+    dev: true
+
+  /tinypool/0.2.4:
+    resolution: {integrity: sha512-Vs3rhkUH6Qq1t5bqtb816oT+HeJTXfwt2cbPH17sWHIYKTotQIFPk3tf2fgqRrVyMDVOc1EnPgzIxfIulXVzwQ==}
+    engines: {node: '>=14.0.0'}
     dev: true
 
   /tinypool/0.3.0:

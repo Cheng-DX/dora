@@ -1,5 +1,6 @@
-export const autoImportPresets = {
+export default {
   '@chengdx/composables': [
+    'presets',
     'useDarkmode',
     'useTheme',
   ],

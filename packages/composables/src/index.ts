@@ -1,3 +1,3 @@
 export * from './use-darkmode'
 export * from './use-theme'
-export * from './auto-import-presets'
+export { default as presets } from './presets'

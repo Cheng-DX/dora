@@ -1,5 +1,4 @@
-// auto import
-export { default as autoImportApi } from './auto-import-presets/api'
+export { default as presets } from './presets/api'
 
 export * from './render-icon'
 export * from './create-menu'

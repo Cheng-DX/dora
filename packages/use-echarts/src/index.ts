@@ -3,4 +3,4 @@ export * from './use-simple-chart'
 
 export * from './util/create-toggle-tool'
 export * from './types'
-export { default as autoImportPresets } from './util/auto-import-presets'
+export { default as presets } from './util/auto-import-presets'
