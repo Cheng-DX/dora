@@ -21,7 +21,7 @@ npm install @chengdx/shared
 - [isSpecial]
 - [isUpperCase]
 - [presets]
-- [replaceSubString](src/replace-sub-string/index.md)
+- [replaceSubstring](src/replace-substring/index.md)
 - [resolveArray]
 - [resolveCallable]
 <!-- FUNCTIONS END -->

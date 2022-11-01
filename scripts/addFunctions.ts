@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { getExportsRuntime } from 'pkg-exports'
-import { formatNaming } from '@chengdx/shared'
+import { formatNaming, replaceSubstring } from '@chengdx/shared'
 import consola from 'consola'
 import { getPackages } from './getPackages'
 
@@ -27,6 +27,6 @@ packages.forEach(async (pkg) => {
       : ''
   }
   const functions = `${exports.map(func => `- [${func}]${path(func)}`).join('\n')}\n`
-  fs.writeFileSync(`${url}/README.md`, content.slice(0, start) + functions + content.slice(end))
+  fs.writeFileSync(`${url}/README.md`, replaceSubstring(content, start, end, functions))
   consola.success(`Resolved ${pkg}`)
 })
