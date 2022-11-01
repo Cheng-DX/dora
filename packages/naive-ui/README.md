@@ -11,10 +11,9 @@
 npm install @chengdx/naive-ui
 ```
 
-### functions
-- [renderIcon](./src/render-icon/index.md)
-- [createMenu](./src/create-menu/index.md)
-- [useSelection](./src/use-selection/index.md)
+<!-- FUNCTIONS START -->
+- [createMenu](src/create-menu/index.md)
+- [presets]
+- [renderIcon](src/render-icon/index.md)
+- [useSelection](src/use-selection/index.md)
 
-## License
-[MIT](./LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)

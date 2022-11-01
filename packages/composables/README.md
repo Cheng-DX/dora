@@ -10,9 +10,8 @@
 npm install @chengdx/composables
 ```
 
-### functions
-- [useDarkmode](./src/use-darkmode/index.md)
-- [useTheme](./src/use-theme/index.md)
+<!-- FUNCTIONS START -->
+- [presets]
+- [useDarkmode](src/use-darkmode/index.md)
+- [useTheme](src/use-theme/index.md)
 
-### License
-[MIT](./LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)
