@@ -1,10 +1,16 @@
 import { capitalize, isUpperCase } from '../handle-char'
 import type { Format } from './types'
 
-export function format(
+export function formatNaming(
   name: string,
-  format: Format,
-  options?: { ignoreNonLetters?: boolean },
+  target: Format,
+  options?: {
+    /**
+     * Ignore non-letter characters
+     * @default true
+     */
+    ignoreNonLetters?: boolean
+  },
 ): { result: string; parts: string[]; type: Format } {
   if (!name) {
     return {
@@ -17,7 +23,7 @@ export function format(
   const { ignoreNonLetters = true } = options || {}
   const parts = intoParts(name, nameFormat)
 
-  if (nameFormat === format) {
+  if (nameFormat === target) {
     return {
       result: name,
       parts,
@@ -26,7 +32,7 @@ export function format(
   }
 
   let result = name
-  switch (format) {
+  switch (target) {
     case 'camel':
       result = parts.map((part, i) => i === 0 ? part : capitalize(part, { ignoreNonLetters })).join('')
       break
@@ -49,7 +55,7 @@ export function format(
   }
 }
 
-export function intoParts(name: string, nameFormat: Format): string[] {
+function intoParts(name: string, nameFormat: Format): string[] {
   switch (nameFormat) {
     case 'camel':
     case 'pascal':
@@ -63,7 +69,7 @@ export function intoParts(name: string, nameFormat: Format): string[] {
   }
 }
 
-export function whichFormat(name: string): Format {
+function whichFormat(name: string): Format {
   if (!name)
     throw new Error('name is required')
   if (name.includes('_') && name.split('_').every(s => s.length > 0))

@@ -38,6 +38,7 @@ importers:
   packages/composables:
     specifiers:
       '@antfu/eslint-config': ^0.27.0
+      '@chengdx/shared': workspace:*
       '@vueuse/core': ^9.3.0
       eslint: ^8.25.0
       pnpm: ^7.13.5
@@ -45,6 +46,8 @@ importers:
       unbuild: ^0.8.11
       vitest: ^0.23.4
       vue: ^3.2.41
+    dependencies:
+      '@chengdx/shared': link:../shared
     devDependencies:
       '@antfu/eslint-config': 0.27.0_z4bbprzjrhnsfa24uvmcbu7f5q
       '@vueuse/core': 9.3.0_vue@3.2.41
