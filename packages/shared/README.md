@@ -10,20 +10,20 @@ npm install @chengdx/shared
 ```
 
 <!-- FUNCTIONS START -->
-- [capitalize]
-- [charIs]
+- capitalize
+- charIs
 - [createArray](src/create-array/index.md)
 - [formatNaming](src/format-naming/index.md)
-- [indexOfFirstLetter]
-- [isLetter]
-- [isLowerCase]
-- [isNumber]
-- [isSpecial]
-- [isUpperCase]
-- [presets]
+- indexOfFirstLetter
+- isLetter
+- isLowerCase
+- isNumber
+- isSpecial
+- isUpperCase
+- presets
 - [replaceSubstring](src/replace-substring/index.md)
-- [resolveArray]
-- [resolveCallable]
+- resolveArray
+- resolveCallable
 <!-- FUNCTIONS END -->
 
 ### License

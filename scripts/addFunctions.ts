@@ -23,10 +23,10 @@ packages.forEach(async (pkg) => {
   const path = (func: string) => {
     const kebab = formatNaming(func, 'kebab').result
     return dirs.includes(kebab)
-      ? `(src/${kebab}/index.md)`
-      : ''
+      ? `- [${func}](src/${kebab}/index.md)`
+      : `- ${func}`
   }
-  const functions = `${exports.map(func => `- [${func}]${path(func)}`).join('\n')}\n`
+  const functions = `${exports.map(func => path(func)).join('\n')}\n`
   fs.writeFileSync(`${url}/README.md`, replaceSubstring(content, start, end, functions))
   consola.success(`Resolved ${pkg}`)
 })

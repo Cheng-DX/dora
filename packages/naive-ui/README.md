@@ -13,7 +13,7 @@ npm install @chengdx/naive-ui
 
 <!-- FUNCTIONS START -->
 - [createMenu](src/create-menu/index.md)
-- [presets]
+- presets
 - [renderIcon](src/render-icon/index.md)
 - [useSelection](src/use-selection/index.md)
 
