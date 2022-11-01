@@ -8,4 +8,7 @@
 - [presets](src/presets/index.md)
 - [useChart](src/use-chart/index.md)
 - [useSimpleChart](src/use-simple-chart/index.md)
+<!-- FUNCTIONS END -->
 
+### License
+[MIT](./LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)
