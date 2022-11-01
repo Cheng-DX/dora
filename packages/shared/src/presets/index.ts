@@ -11,6 +11,7 @@ export default {
     'isSpecial',
     'isUpperCase',
     'presets',
+    'replaceSubString',
     'resolveArray',
     'resolveCallable',
   ],
