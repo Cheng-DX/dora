@@ -10,7 +10,7 @@
 
 ## List
 - [compoables](./packages/composables/README.md): composable functions for Vue.js
-- [default-export-resolver](./packages/default-export-resolver/README.md): help to generate default export for `unplugin-vue-components`
+- [default-export-resolver](./packages/default-export-resolver/README.md): help to generate default export for `unplugin-vue-components` and `unplugin-auto-import`
 - [shared](./packages/shared/README.md): shared utils
 - [use-echarts](./packages/use-echarts/README.md): composable functions for creating an reactive echart instance in Vuejs.
 - [naive-ui](./packages/naive-ui/README.md): naive-ui tools
