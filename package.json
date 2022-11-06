@@ -42,7 +42,8 @@
     "play": "cd playground && nr dev",
     "presets": "tsx ./scripts/generatePresets.ts",
     "add-funs": "tsx ./scripts/addFunctions.ts",
-    "patch": "nr presets && nr add-funs"
+    "patch": "nr presets && nr add-funs",
+    "publish": "pnpm -r --filter './packages/**' publish"
   },
   "dependencies": {
     "@chengdx/composables": "workspace:*",
