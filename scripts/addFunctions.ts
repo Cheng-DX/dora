@@ -23,9 +23,14 @@ packages.forEach(async (pkg) => {
   )
 
   const startTag = '<!-- FUNCTIONS START -->\n'
-  const start = content.indexOf(startTag) + startTag.length
+  const start = content.indexOf(startTag)
   const endTag = '<!-- FUNCTIONS END -->'
   const end = content.indexOf(endTag)
+
+  if (start === -1 || end === -1) {
+    consola.error(`Cannot find start or end tag for package ${pkg}`)
+    return
+  }
 
   const path = (func: string) => {
     const kebab = formatNaming(func, 'kebab').result
@@ -34,6 +39,6 @@ packages.forEach(async (pkg) => {
       : `- ${func}`
   }
   const functions = `${exports.map(func => path(func)).join('\n')}\n`
-  await fs.writeFile(`${url}/README.md`, replaceSubstring(content, start, end, functions))
+  await fs.writeFile(`${url}/README.md`, replaceSubstring(content, start + startTag.length, end, functions))
   consola.success(`Resolved ${pkg}`)
 })
