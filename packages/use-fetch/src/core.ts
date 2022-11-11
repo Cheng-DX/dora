@@ -1,74 +1,74 @@
-import { defuWithArray } from '@chengdx/defa'
+import Axios from 'axios'
+import type { AxiosInstance, CreateAxiosDefaults } from 'axios'
 import type { MaybeComputedRef } from '@chengdx/maybe-ref'
 import { resolveRef, resolveUnref } from '@chengdx/maybe-ref'
-import { ref, watch } from 'vue'
 import type { Ref } from 'vue'
-import defu from 'defu'
-import type { Fetcher, HasNotParamsPath, HasParamsPath, Params, Path, Return } from './types'
-import { createDefualt } from './utils'
+import { ref, watch } from 'vue'
+import { defuWithArray } from '../../defa/dist'
+import type { Method, Params, Path, Return } from './types'
 
-const hasInited = false
-let fetcher: Fetcher = async (_path, _params, _method = 'GET') => {
-  return {} as any
+let axios: AxiosInstance
+
+let GET: any | undefined
+let POST: any | undefined
+
+export function configAxios(config: CreateAxiosDefaults) {
+  axios = Axios.create(config)
+  // @ts-expect-error 'GET' should exist
+  GET = createVerbMethod('GET')
+  // @ts-expect-error 'POST' should exist
+  POST = createVerbMethod('POST')
 }
 
-export function registerFetcher(_fetcher: Fetcher) {
-  if (!hasInited)
-    fetcher = _fetcher
+function createVerbMethod<M extends Method>(type: M) {
+  return async <P extends Path<M>>(path: P, params?: Params<M, P>) => {
+    let status, data
+    switch (type) {
+      case 'GET':
+        ({ status, data } = await axios.get<Return<M, P>>(path, { params }))
+        break
+      case 'POST':
+        ({ status, data } = await axios.post<Return<M, P>>(path, params))
+        break
+      default:
+        throw new Error(`Unknown method type: ${type}`)
+    }
+    if (status >= 200 && status < 300)
+      return data
+    return {} as Return<M, P>
+  }
 }
 
-export function useFetch<P extends HasParamsPath>(
+function useFetch<
+  M extends Method,
+  P extends Path<M>,
+>(
+  fetchFunc: (path: P, params?: Params<M, P>) => Promise<Return<M, P>>,
   url: P,
-  params: MaybeComputedRef<NonNullable<Params<P>>>,
-  options: FetchOptions,
-): [
-  Ref<Return<P>>,
-  () => Promise<Return<P>>,
-]
-
-export function useFetch<P extends HasNotParamsPath>(
-  url: P,
-  options: FetchOptions,
-): [
-  Ref<Return<P>>,
-  () => Promise<Return<P>>,
-]
-
-export function useFetch<P extends Path>(
-  url: P,
-  arg1: MaybeComputedRef<NonNullable<Params<P>>> | FetchOptions,
-  arg2?: FetchOptions,
+  params?: MaybeComputedRef<Params<M, P>>,
+  options?: FetchOptions,
 ) {
-  const data = ref(createDefualt())
+  if (!axios)
+    throw new Error('[@chengdx/use-fetch] Please call configAxios to create an instance.')
 
-  let params: MaybeComputedRef<NonNullable<Params<P>>> | undefined
-  let options: FetchOptions
-
-  if (isFetchOptions(arg1)) {
-    options = defu(arg1 as any, {
-      lazy: false,
-      autoRefetch: true,
-    })
-  }
-  else {
-    params = arg1
-    if (arg2 !== undefined) {
-      options = defu(arg2, {
-        lazy: false,
-        autoRefetch: true,
-      })
-    }
-    else {
-      throw new Error('arg2 must be defined')
-    }
-  }
-
-  const { lazy = false, autoRefetch = true, method } = options
+  const data = ref() as Ref<Return<M, P>>
+  const isReady = ref(false)
+  const loading = ref(false)
+  const { lazy = false, autoRefetch = true } = options || {}
 
   async function fetch() {
-    const fetchResult = await fetcher(resolveUnref(url), resolveUnref(params), method)
-    const resolved = defuWithArray(fetchResult, createDefualt())
-    data.value = resolved
+    loading.value = true
+    try {
+      const fetchResult = await fetchFunc(resolveUnref(url), resolveUnref(params))
+      const resolved = defuWithArray(fetchResult, {}) as Return<M, P>
+      data.value = resolved
+    }
+    catch (_) {
+      isReady.value = false
+    }
+    finally {
+      loading.value = false
+    }
   }
 
   if (!lazy)
@@ -83,15 +83,31 @@ export function useFetch<P extends Path>(
   return [
     data,
     fetch,
+    loading,
+    isReady,
   ] as const
 }
 
-function isFetchOptions(
-  arg: any,
-): arg is FetchOptions {
-  if (!arg)
-    return false
-  return typeof arg === 'object' && Object.hasOwn(arg, 'method')
+// @ts-expect-error 'Get' should exist
+export function useGet<P extends Path<'GET'>>(
+  url: P,
+  // @ts-expect-error 'Get' should exist
+  params?: MaybeComputedRef<Params<'GET', P>>,
+  options?: FetchOptions,
+) {
+  // @ts-expect-error 'Get' should exist
+  return useFetch<'GET', P>(GET as any, url, params, options)
+}
+
+// @ts-expect-error 'POST' should exist
+export function usePost<P extends Path<'POST'>>(
+  url: P,
+  // @ts-expect-error 'POST' should exist
+  params?: MaybeComputedRef<Params<'POST', P>>,
+  options?: FetchOptions,
+) {
+  // @ts-expect-error 'POST' should exist
+  return useFetch<'POST', P>(POST as any, url, params, options)
 }
 
 interface FetchOptions {
@@ -105,9 +121,4 @@ interface FetchOptions {
    * default as true
    */
   autoRefetch?: boolean
-  /**
-   * Method of the fetch request.
-   */
-  method: string
 }
-

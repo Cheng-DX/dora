@@ -1,22 +1,10 @@
-export declare interface ApiMap {
+export declare interface ApiDataTypeMap {
 }
 
-export type Path = keyof ApiMap
-export type Content<P extends Path> = ApiMap[P]
-export type Params<P extends Path> = 'params' extends keyof Content<P> ? Content<P>['params'] : never
-export type Return<P extends Path> = 'returnType' extends keyof Content<P>
-  ? Content<P>['returnType']
-  : (
-      'params' extends keyof Content<P>
-        ? never
-        : Content<P>
-    )
-type PickHasParams<P> = P extends Path
-  ? 'params' extends keyof Content<P>
-    ? P
-    : never
-  : never
-export type HasParamsPath = PickHasParams<Path>
-export type HasNotParamsPath = Exclude<Path, HasParamsPath>
-
-export type Fetcher = <P extends Path>(path: P, params?: Params<P>, method?: string) => Promise<Return<P>>
+// how it works
+export type Method = keyof ApiDataTypeMap
+type PickString<T extends string | number | symbol> = T extends string ? T : never
+export type Path<M extends Method> = PickString<keyof ApiDataTypeMap[M]>
+type PR<M extends Method, P extends Path<M>> = ApiDataTypeMap[M][P]
+export type Params<M extends Method, P extends Path<M>> = 'params' extends keyof PR<M, P> ? PR<M, P>['params'] : undefined
+export type Return<M extends Method, P extends Path<M>> = 'returnType' extends keyof PR<M, P> ? PR<M, P>['returnType'] : ('params' extends keyof PR<M, P> ? never : PR<M, P>)
