@@ -1,5 +1,6 @@
 import { dependencies } from '../package.json'
 
-export function getPackages(filter: (pkg: string) => boolean) {
-  return Object.keys(dependencies).filter(filter)
+export type Package = keyof typeof dependencies
+export function getPackages(filter: (pkg: Package) => boolean) {
+  return (Object.keys(dependencies) as Package[]).filter(filter)
 }

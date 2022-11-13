@@ -1,8 +1,8 @@
 import { assert, describe, expect, it } from 'vitest'
-import { defuWithArray } from '.'
+import defa from '.'
 
 describe('defuWithArray', () => {
-  const r = defuWithArray([1, 2, 3], [4, 5, 6])
+  const r = defa([1, 2, 3], [4, 5, 6])
   it('should works', () => {
     expect(r).toEqual([1, 2, 3])
   })

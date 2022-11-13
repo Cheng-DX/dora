@@ -1,9 +1,14 @@
 import fs from 'fs'
 import { getExportsRuntime } from 'pkg-exports'
 import consola from 'consola'
+import type { Package } from './getPackages'
 import { getPackages } from './getPackages'
 
-const packages = getPackages(pkg => pkg !== '@chengdx/default-export-resolver')
+const exclued: Package[] = [
+  '@chengdx/default-export-resolver',
+  '@chengdx/defa',
+]
+const packages = getPackages(pkg => !exclued.includes(pkg))
 
 packages.forEach(async (pkg) => {
   const exports: string[] = await getExportsRuntime(pkg)

@@ -1,10 +1,9 @@
 ## @chengdx/defa
-defu with some features
+Make the result of defu arrays reasonable.
 
-## Functions
-<!-- FUNCTIONS START -->
-- [defuWithArray](src/defu-with-array/index.md)
-<!-- FUNCTIONS END -->
+```ts
+import defa from '@chengdx/defa'
 
-## MIT
-
+const _ = defu([1, 2, 3], [4, 5, 6]) // _ is  an object :{ 0: 1, 1: 2, 2: 3 }
+const r = defuWithArray([1, 2, 3], [4, 5, 6]) // but r is an array: [1, 2, 3]
+```
