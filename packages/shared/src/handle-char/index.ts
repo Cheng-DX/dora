@@ -13,11 +13,7 @@ export const isSpecial = charIs(/[^a-zA-Z0-9]/)
 export const isLetter = charIs(/[a-zA-Z]/)
 
 export function indexOfFirstLetter(str: string) {
-  for (let i = 0; i < str.length; i++) {
-    if (isLetter(str[i]))
-      return i
-  }
-  return -1
+  return Array.from(str).findIndex(isLetter)
 }
 
 export function capitalize(str: string, options?: {
