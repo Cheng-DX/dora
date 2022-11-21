@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.8.0",
   "private": true,
-  "packageManager": "pnpm@7.13.4",
+  "packageManager": "pnpm@7.17.0",
   "description": "",
   "author": "Cheng-DX",
   "license": "MIT",

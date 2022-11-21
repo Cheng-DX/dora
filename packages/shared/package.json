@@ -2,7 +2,7 @@
   "name": "@chengdx/shared",
   "type": "module",
   "version": "0.8.0",
-  "packageManager": "pnpm@7.13.0",
+  "packageManager": "pnpm@7.17.0",
   "description": "",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
