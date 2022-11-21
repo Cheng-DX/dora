@@ -1,0 +1,55 @@
+{
+  "name": "@chengdx/components",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.17.0",
+  "description": "Vue componnets",
+  "author": "Cheng-DX",
+  "license": "MIT",
+  "homepage": "https://github.com/Cheng-DX/utils/tree/main/packages/@chengdx/components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cheng-DX/utils.git"
+  },
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.27.0",
+    "eslint": "^8.23.1",
+    "pnpm": "^7.13.0",
+    "typescript": "^4.8.3",
+    "unbuild": "^0.8.11",
+    "vitest": "^0.23.4"
+  }
+}
