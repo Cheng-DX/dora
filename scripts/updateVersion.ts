@@ -1,6 +1,7 @@
 import fs from 'fs'
 import consola from 'consola'
 import parseArgs from 'minimist'
+import { capitalize } from '@chengdx/shared'
 import { getOrCreateFile } from './getPackages'
 
 type UpdateType = 'major' | 'minor' | 'patch'
@@ -32,6 +33,5 @@ getOrCreateFile('package.json').forEach(({ pkg, path }) => {
 
   content.version = newVersion
   fs.writeFileSync(path, JSON.stringify(content, null, 2))
-  consola.info(`Updating ${pkg} from ${version} to ${newVersion}`)
+  consola.success(`${capitalize(type)} ${pkg} from ${version} => ${newVersion}`)
 })
-
