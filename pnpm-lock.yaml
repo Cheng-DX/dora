@@ -12,9 +12,11 @@ importers:
       '@chengdx/naive-ui': workspace:*
       '@chengdx/shared': workspace:*
       '@chengdx/use-echarts': workspace:*
+      '@types/minimist': ^1.2.2
       '@vitest/ui': ^0.24.3
       consola: ^2.15.3
       eslint: ^8.26.0
+      minimist: ^1.2.7
       pkg-exports: ^0.1.2
       pnpm: ^7.14.0
       turbo: ^1.6.1
@@ -31,9 +33,11 @@ importers:
       '@chengdx/use-echarts': link:packages/use-echarts
     devDependencies:
       '@antfu/eslint-config': 0.27.0_wyqvi574yv7oiwfeinomdzmc3m
+      '@types/minimist': 1.2.2
       '@vitest/ui': 0.24.3
       consola: 2.15.3
       eslint: 8.26.0
+      minimist: 1.2.7
       pkg-exports: 0.1.2
       pnpm: 7.14.0
       turbo: 1.6.1
@@ -1062,6 +1066,10 @@ packages:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
     dependencies:
       '@types/unist': 2.0.6
+    dev: true
+
+  /@types/minimist/1.2.2:
+    resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
   /@types/node/17.0.45:
