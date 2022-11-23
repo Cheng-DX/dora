@@ -6,7 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import AutoImportComponents from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Inspect from 'vite-plugin-inspect'
-import { autoImportPresets } from '@chengdx/composables'
+import { presets as autoImportPresets } from '@chengdx/composables'
 
 export default defineConfig({
   plugins: [
