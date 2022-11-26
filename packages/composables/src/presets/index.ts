@@ -3,6 +3,7 @@ export default {
     'presets',
     'useDarkmode',
     'useFormatNaming',
+    'useMax',
     'useTheme',
   ],
 }
