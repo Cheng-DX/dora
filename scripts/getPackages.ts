@@ -25,6 +25,7 @@ export function getFile(
         existed = false
       }
       else {
+        // FIXME: wrong reaction when the path is a file
         fs.mkdirSync(fullPath, { recursive: true })
         consola.info(`Created ${filepath} for ${pkg}`)
       }
