@@ -7,10 +7,14 @@ import AutoImportComponents from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Inspect from 'vite-plugin-inspect'
 import { presets as autoImportPresets } from '@chengdx/composables'
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   plugins: [
     vue(),
+    UnoCSS({
+      configFile: './uno.config.ts',
+    }),
     vueJsx(),
     AutoImport({
       include: [
