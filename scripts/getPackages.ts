@@ -7,21 +7,32 @@ export function getPackages(filter?: (pkg: Package) => boolean) {
   return (Object.keys(dependencies) as Package[]).filter(filter ?? (() => true))
 }
 
-export function getOrCreateFile(
+export function getFile(
   filepath: string,
-  filter?: (pkg: Package) => boolean,
+  options?: {
+    filter?: (pkg: Package) => boolean
+    createOnNotExisted?: boolean
+  },
 ) {
+  const { filter, createOnNotExisted = true } = options || {}
   return getPackages(filter).map((pkg) => {
+    let existed = true
     const resolvedPath = filepath.startsWith('/') ? filepath : `/${filepath}`
     const fullPath = `packages/${pkg.split('/').pop()}${resolvedPath}`
 
     if (!fs.existsSync(fullPath)) {
-      fs.mkdirSync(fullPath, { recursive: true })
-      consola.info(`Created ${filepath} for ${pkg}`)
+      if (!createOnNotExisted) {
+        existed = false
+      }
+      else {
+        fs.mkdirSync(fullPath, { recursive: true })
+        consola.info(`Created ${filepath} for ${pkg}`)
+      }
     }
     return {
       pkg,
       path: fullPath,
+      existed,
     }
   })
 }

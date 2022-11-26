@@ -2,11 +2,14 @@ import fs from 'fs'
 import consola from 'consola'
 import parseArgs from 'minimist'
 import { capitalize } from '@chengdx/shared'
-import { getOrCreateFile } from './getPackages'
+import { getFile } from './getPackages'
 
 type UpdateType = 'major' | 'minor' | 'patch'
 
-getOrCreateFile('package.json').forEach(({ pkg, path }) => {
+getFile('package.json', { createOnNotExisted: false }).forEach(({ pkg, path, existed }) => {
+  if (!existed)
+    return
+
   const content = JSON.parse(fs.readFileSync(path, 'utf-8'))
   const { version } = content
   const splited = (version as string).split('.').map(v => parseInt(v))
