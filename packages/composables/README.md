@@ -14,6 +14,7 @@ npm install @chengdx/composables
 - [presets](src/presets/index.md)
 - [useDarkmode](src/use-darkmode/index.md)
 - [useFormatNaming](src/use-format-naming/index.md)
+- [useMax](src/use-max/index.md)
 - [useTheme](src/use-theme/index.md)
 <!-- FUNCTIONS END -->
 

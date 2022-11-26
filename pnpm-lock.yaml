@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.27.0
+      '@chengdx/components': workspace:*
       '@chengdx/composables': workspace:*
       '@chengdx/defa': workspace:*
       '@chengdx/default-export-resolver': workspace:*
@@ -24,6 +25,7 @@ importers:
       unbuild: ^0.8.11
       vitest: ^0.23.4
     dependencies:
+      '@chengdx/components': link:packages/components
       '@chengdx/composables': link:packages/composables
       '@chengdx/defa': link:packages/defa
       '@chengdx/default-export-resolver': link:packages/default-export-resolver

@@ -1,12 +1,12 @@
 {
   "name": "@chengdx/components",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.9.0",
   "packageManager": "pnpm@7.17.0",
-  "description": "Vue componnets",
+  "description": "Vue components",
   "author": "Cheng-DX",
   "license": "MIT",
-  "homepage": "https://github.com/Cheng-DX/utils/tree/main/packages/@chengdx/components#readme",
+  "homepage": "https://github.com/Cheng-DX/utils/tree/main/packages/components#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cheng-DX/utils.git"
