@@ -5,7 +5,7 @@ import { resolveCallable } from '@chengdx/shared'
 import { dependencies } from '../package.json'
 
 export type Package = keyof typeof dependencies
-export function getPackages(filter?: (pkg: Package) => boolean) {
+export function getPackages(filter?: (pkg: Package) => boolean): Package[] {
   return (Object.keys(dependencies) as Package[]).filter(filter ?? (() => true))
 }
 
@@ -25,7 +25,7 @@ export function getFile(
      * Template string while create new file
      * @default ''
      */
-    template?: MaybeCallable<string>
+    template?: MaybeCallable<string, [{ pkg: Package }]>
   },
 ) {
   const { filter, createOnNotExisted = true, template = '' } = options || {}
@@ -33,7 +33,7 @@ export function getFile(
     let existed = true
     const resolvedPath = filepath.startsWith('/') ? filepath.slice(1) : filepath
     const hasDir = resolvedPath.split('/').length > 1
-    const dirName = `packages/${pkg.split('/').pop()}/${resolvedPath.split('/').slice(0, -1).join('/')}`
+    const dirName = `packages / ${pkg.split('/').pop()} /${resolvedPath.split('/').slice(0, -1).join(' / ')}`
     const fileName = resolvedPath.split('/').pop()
     const fullPath = `${dirName}/${fileName}`
 
@@ -45,7 +45,7 @@ export function getFile(
         consola.info(`Created ${filepath} for ${pkg}`)
       }
 
-      fs.writeFileSync(fullPath, resolveCallable(template, pkg))
+      fs.writeFileSync(fullPath, resolveCallable(template, { pkg }))
     }
     return {
       pkg,
