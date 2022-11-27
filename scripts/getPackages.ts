@@ -1,5 +1,7 @@
 import fs from 'fs'
 import consola from 'consola'
+import type { MaybeCallable } from '@chengdx/shared'
+import { resolveCallable } from '@chengdx/shared'
 import { dependencies } from '../package.json'
 
 export type Package = keyof typeof dependencies
@@ -10,11 +12,23 @@ export function getPackages(filter?: (pkg: Package) => boolean) {
 export function getFile(
   filepath: string,
   options?: {
+    /**
+     * Filter packages should be resolved
+     */
     filter?: (pkg: Package) => boolean
+    /**
+     * Should create it while traget file not exists
+     * @default true
+     */
     createOnNotExisted?: boolean
+    /**
+     * Template string while create new file
+     * @default ''
+     */
+    template?: MaybeCallable<string>
   },
 ) {
-  const { filter, createOnNotExisted = true } = options || {}
+  const { filter, createOnNotExisted = true, template = '' } = options || {}
   return getPackages(filter).map((pkg) => {
     let existed = true
     const resolvedPath = filepath.startsWith('/') ? filepath.slice(1) : filepath
@@ -31,7 +45,7 @@ export function getFile(
         consola.info(`Created ${filepath} for ${pkg}`)
       }
 
-      fs.writeFileSync(fullPath, '')
+      fs.writeFileSync(fullPath, resolveCallable(template, pkg))
     }
     return {
       pkg,

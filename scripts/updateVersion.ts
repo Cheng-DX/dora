@@ -6,7 +6,10 @@ import { getFile } from './getPackages'
 
 type UpdateType = 'major' | 'minor' | 'patch'
 
-getFile('package.json', { createOnNotExisted: false }).forEach(({ pkg, path, existed }) => {
+getFile(
+  'package.json',
+  { createOnNotExisted: false },
+).forEach(({ pkg, path, existed }) => {
   if (!existed)
     return
 
