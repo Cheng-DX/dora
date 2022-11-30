@@ -1,4 +1,4 @@
-import type { ComputedRef, Ref } from 'vue'
+import type { ComponentPublicInstance, ComputedRef, Ref } from 'vue'
 
 /**
  * Maybe it's a ref, or a plain value
@@ -26,3 +26,8 @@ export type MaybeComputedRef<T> = MaybeReadonlyRef<T> | MaybeRef<T>
  * ```
  */
 export type MaybeReadonlyRef<T> = (() => T) | ComputedRef<T>
+
+export type VueInstance = ComponentPublicInstance
+export type MaybeElement = HTMLElement | SVGElement | VueInstance | undefined | null
+export type MaybeElementRef<T extends MaybeElement = MaybeElement> = MaybeRef<T>
+export type MaybeComputedElementRef<T extends MaybeElement = MaybeElement> = MaybeComputedRef<T>
