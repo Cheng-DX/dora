@@ -11,11 +11,16 @@ npm install @chengdx/composables
 ```
 
 <!-- FUNCTIONS START -->
+- createEventHandlers
+- noop
 - [presets](src/presets/index.md)
 - [useDarkmode](src/use-darkmode/index.md)
+- [useEventListener](src/use-event-listener/index.md)
 - [useFormatNaming](src/use-format-naming/index.md)
+- [useLocalStorage](src/use-local-storage/index.md)
 - [useMax](src/use-max/index.md)
 - [useTheme](src/use-theme/index.md)
+- [useToggle](src/use-toggle/index.md)
 <!-- FUNCTIONS END -->
 
 ### License

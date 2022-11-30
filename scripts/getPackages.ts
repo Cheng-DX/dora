@@ -33,7 +33,7 @@ export function getFile(
     let existed = true
     const resolvedPath = filepath.startsWith('/') ? filepath.slice(1) : filepath
     const hasDir = resolvedPath.split('/').length > 1
-    const dirName = `packages / ${pkg.split('/').pop()} /${resolvedPath.split('/').slice(0, -1).join(' / ')}`
+    const dirName = `packages/${pkg.split('/').pop()}/${resolvedPath.split('/').slice(0, -1).join('/')}`
     const fileName = resolvedPath.split('/').pop()
     const fullPath = `${dirName}/${fileName}`
 
