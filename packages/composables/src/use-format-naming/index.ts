@@ -1,7 +1,7 @@
 import type { Format } from '@chengdx/shared'
 import { formatNaming } from '@chengdx/shared'
-import type { MaybeComputedRef } from '@vueuse/core'
-import { resolveUnref } from '@vueuse/core'
+import type { MaybeComputedRef } from '@chengdx/maybe-ref'
+import { resolveUnref } from '@chengdx/maybe-ref'
 import type { Ref } from 'vue'
 import { ref, watchEffect } from 'vue'
 
