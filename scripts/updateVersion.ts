@@ -5,22 +5,39 @@ import { capitalize } from '@chengdx/shared'
 import { getFile } from './getPackages'
 
 type UpdateType = 'major' | 'minor' | 'patch'
+const { _: [type = 'patch'] } = parseArgs(process.argv.slice(2))
 
-getFile(
-  'package.json',
-  { createOnNotExisted: false },
-).forEach(({ pkg, path, existed }) => {
-  if (!existed)
-    return
+getFile('package.json', { createOnNotExisted: false })
+  .concat({
+    pkg: 'workspace-root' as any,
+    existed: true,
+    path: './package.json',
+  })
+  .forEach(({ pkg, path, existed }) => {
+    if (!existed)
+      return
 
-  const content = JSON.parse(fs.readFileSync(path, 'utf-8'))
-  const { version } = content
-  const splited = (version as string).split('.').map(v => parseInt(v))
+    const content = JSON.parse(fs.readFileSync(path, 'utf-8'))
+    const { version } = content
+    let newVersion
+    try {
+      newVersion = core(version, type as UpdateType)
+      content.version = newVersion
+    }
+    catch (e) {
+      consola.error(`${e} for ${pkg}`)
+      return
+    }
+    fs.writeFileSync(path, JSON.stringify(content, null, 2))
+    consola.success(`${capitalize(type)} ${pkg} from ${version} => ${newVersion}`)
+  })
+
+function core(version: string, type: UpdateType) {
+  const splited = version.split('.').map(v => parseInt(v))
   if (splited.length !== 3)
-    consola.error(`Invalid version ${version} for ${pkg}`)
+    throw new Error(`Invalid version ${version}`)
 
   const [major, minor, patch] = splited
-  const { _: [type = 'patch'] } = parseArgs(process.argv.slice(2))
   let newVersion
 
   switch (type as UpdateType) {
@@ -37,7 +54,5 @@ getFile(
       consola.error(`Invalid type ${type}`)
   }
 
-  content.version = newVersion
-  fs.writeFileSync(path, JSON.stringify(content, null, 2))
-  consola.success(`${capitalize(type)} ${pkg} from ${version} => ${newVersion}`)
-})
+  return newVersion
+}
