@@ -19,5 +19,5 @@ type A = MaybeCallable<
 >
 
 const a: A = (_: string) => ({ tag: Number(_) })
-const b = resolveCallable2(a, '1', 1, { tag: true }) // b has type { tag: number }
+const b = resolveCallable(a, '1', 1, { tag: true }) // b has type { tag: number }
 ```

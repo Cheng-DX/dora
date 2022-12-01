@@ -1,4 +1,4 @@
-import { assert, describe, expect, it } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import type { MenuOption } from 'naive-ui'
 import { h } from 'vue'
 import { createMenu } from '.'
@@ -30,19 +30,17 @@ const routes = [
   },
 ]
 
-const onClick = () => {}
-
 const menu: MenuOption[] = [
   {
-    label: () => h('a', { onClick }, 'root'),
+    label: () => h('a', {}, 'root'),
     key: '/',
     children: [
       {
-        label: () => h('a', { onClick }, 'a'),
+        label: () => h('a', {}, 'a'),
         key: '/a',
         children: [
           {
-            label: () => h('a', { onClick }, 'a-1'),
+            label: () => h('a', {}, 'a-1'),
             key: '/a-1',
           },
         ],
@@ -50,13 +48,13 @@ const menu: MenuOption[] = [
     ],
   },
   {
-    label: () => h('a', { onClick }, 'b'),
+    label: () => h('a', {}, 'b'),
     key: '/b',
   },
 ]
 
 describe('createMenu', () => {
   it('should return menu', () => {
-    expect(createMenu(routes, () => {})).toEqual(menu)
+    expect(JSON.stringify(createMenu(routes))).toMatchObject(JSON.stringify(menu))
   })
 })

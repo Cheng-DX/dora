@@ -3,6 +3,6 @@ import { formatNaming } from '.'
 
 describe('transformVariableNaming', () => {
   it('should matched', () => {
-    expect(formatNaming('foo-file', 'camel')).toMatchInlineSnapshot('"foo-file"')
+    expect(formatNaming('foo-file', 'camel').result).toMatchInlineSnapshot('"fooFile"')
   })
 })
