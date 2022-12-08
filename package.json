@@ -1,7 +1,7 @@
 {
   "name": "utils",
   "type": "module",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "private": true,
   "packageManager": "pnpm@7.17.0",
   "description": "Some utils I used",
@@ -23,7 +23,7 @@
     "test": "pnpm -r --filter './packages/**' run test --config ../../vitest.config.ts",
     "typecheck": "tsc --noEmit",
     "play": "cd playground && nr dev",
-    "presets": "tsx ./scripts/generatePresets.ts",
+    "presets": "nr build && tsx ./scripts/generatePresets.ts",
     "add-funs": "tsx ./scripts/addFunctions.ts",
     "patch": "nr presets && nr add-funs",
     "publish": "pnpm -r --filter './packages/**' publish --access=public",

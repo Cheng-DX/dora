@@ -1,7 +1,7 @@
 {
   "name": "@chengdx/use-echarts",
   "type": "module",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "packageManager": "pnpm@7.17.0",
   "description": "Composable echarts functions for Vue.js",
   "author": "Cheng-DX",

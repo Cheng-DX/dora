@@ -14,5 +14,7 @@ export default {
     'replaceSubstring',
     'resolveArray',
     'resolveCallable',
+    'resolveMatch',
+    'resolveMatches',
   ],
 }
