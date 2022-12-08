@@ -4,6 +4,7 @@ import {
   zhCN,
 } from 'naive-ui'
 import { RouterView } from 'vue-router'
+import { useDarkmode } from '@chengdx/composables'
 import { fullLoading } from '~/stores/loading'
 
 const { darkmode } = useDarkmode()

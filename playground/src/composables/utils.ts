@@ -1,6 +1,5 @@
 import { NIcon } from 'naive-ui'
 import type { Component } from 'vue'
-import type { M } from '@chengdx/composables'
 
 export function writableComputed<T>(getter: () => T) {
   const innerRef = ref(getter()) as Ref<T>
@@ -23,5 +22,3 @@ declare module '@chengdx/composables' {
     'Y': number
   }
 }
-
-const a: M = 'Y'

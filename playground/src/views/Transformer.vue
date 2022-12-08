@@ -10,12 +10,14 @@ const output = computed(() => formatNaming(input.value, type.value).result)
 <template>
   <n-space>
     <n-input v-model:value="input" style="width: 200px" />
-    <n-select v-model:value="type" style="width: 100px" :options="[
-      { label: 'camel', value: 'camel' },
-      { label: 'kebab', value: 'kebab' },
-      { label: 'snake', value: 'snake' },
-      { label: 'pascal', value: 'pascal' },
-    ]" />
+    <n-select
+      v-model:value="type" style="width: 100px" :options="[
+        { label: 'camel', value: 'camel' },
+        { label: 'kebab', value: 'kebab' },
+        { label: 'snake', value: 'snake' },
+        { label: 'pascal', value: 'pascal' },
+      ]"
+    />
   </n-space>
   {{ output }}
 </template>
