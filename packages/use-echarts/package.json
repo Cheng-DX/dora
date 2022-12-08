@@ -44,6 +44,10 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "echarts": "^5.4.0",
+    "vue": "^3.2.40"
+  },
   "dependencies": {
     "@chengdx/maybe-ref": "workspace:*",
     "@chengdx/shared": "workspace:*",
@@ -58,9 +62,5 @@
     "unbuild": "^0.8.11",
     "vitest": "^0.23.4",
     "vue": "^3.2.41"
-  },
-  "peerDependencies": {
-    "echarts": "^5.4.0",
-    "vue": "^3.2.40"
   }
 }

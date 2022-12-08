@@ -44,9 +44,12 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "dependencies": {
-    "@chengdx/shared": "workspace:*",
-    "@chengdx/maybe-ref": "workspace:*"
+    "@chengdx/maybe-ref": "workspace:*",
+    "@chengdx/shared": "workspace:*"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
@@ -56,8 +59,5 @@
     "unbuild": "^0.8.11",
     "vitest": "^0.23.4",
     "vue": "^3.2.41"
-  },
-  "peerDependencies": {
-    "vue": "^3.0.0"
   }
 }

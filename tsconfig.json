@@ -12,11 +12,11 @@
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
+    "skipDefaultLibCheck": true
   },
-  // "include": [
-  //   "**/**/*.ts"
-  // ],
+  "include": [
+    "**/**/*.ts"
+  ],
   "exclude": [
     "playground",
     "node_modules"
