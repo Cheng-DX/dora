@@ -1,25 +1,27 @@
-## `resolveMatch` & `resolveMatches`
+## `match`, `matchSome`, `matchEvery` and type `Mather`
 
 > Help resolve match for given value. Pure boolean value, function or regex are all supported.
-> use `resolveMatches` to resolve maybe-multiple matches.
+
+> `matchSome` will return true if any of the given value matches.
+> `matchEvery` will return true if all of the given value matches.
 
 ```ts
-import { resolveMatch, resolveMatches } from '@remirror/core'
+import { type Macther, match, matchSome } from '@chengdx/shared'
 
-const a = true
-const b = (path: string) => path.startsWith('a')
+const a: Mather = true
+const b: Mather<[path]> = (path: string) => path.startsWith('a')
 const c = /^a/
 
-resolveMatch(a) // true
+match(a) // true
 
-resolveMatch(b, 'a') // true
-resolveMatch(b, 'b') // false
+match(b, 'a') // true
+match(b, 'b') // false
 
-resolveMatch(c, 'a') // true
-resolveMatch(c, 'b') // false
+match(c, 'a') // true
+match(c, 'b') // false
 
-resolveMatches([a, b, c], 'a_1') // true
-resolveMatches([a, b, c], 'b_1') // false
+matchSome([a, b, c], 'a_1') // true
+matchSome([a, b, c], 'b_1') // false
 
-resolveMatches(a) // true
+matchSome(a) // true
 ```

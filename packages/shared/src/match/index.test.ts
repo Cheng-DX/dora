@@ -1,31 +1,43 @@
 import { describe, expect, it } from 'vitest'
-import { resolveMatch, resolveMatches } from '.'
+import { match, matchEvery, matchSome } from '.'
 
 describe('match test', () => {
   const a = true
   const b = (path: string) => path.startsWith('a')
   const c = /^a/
   it('should be true', () => {
-    expect(resolveMatch(a)).toBe(true)
+    expect(match(a)).toBe(true)
   })
   it('should be called', () => {
-    expect(resolveMatch(b, 'a_1')).toBe(true)
-    expect(resolveMatch(b, 'b_1')).toBe(false)
+    expect(match(b, 'a_1')).toBe(true)
+    expect(match(b, 'b_1')).toBe(false)
   })
   it('should be tested', () => {
-    expect(resolveMatch(c, 'a_1')).toBe(true)
-    expect(resolveMatch(c, 'b_1')).toBe(false)
+    expect(match(c, 'a_1')).toBe(true)
+    expect(match(c, 'b_1')).toBe(false)
   })
 })
 
-describe('matches test', () => {
+describe('match every test', () => {
   const a = true
   const b = (path: string) => path.startsWith('a')
   const c = /^a/
 
   it('should be resolved', () => {
-    expect(resolveMatches([a, b, c], 'a_1')).toBe(true)
-    expect(resolveMatches([a, b, c], 'b_1')).toBe(false)
-    expect(resolveMatches(a)).toBe(true)
+    expect(matchEvery([a, b, c], 'a_1')).toBe(true)
+    expect(matchEvery([a, b, c], 'b_1')).toBe(false)
+    expect(matchEvery(a)).toBe(true)
+  })
+})
+
+describe('match some test', () => {
+  const a = true
+  const b = (path: string) => path.startsWith('a')
+  const c = /^a/
+
+  it('should be resolved', () => {
+    expect(matchSome([a, b, c], 'a_1')).toBe(true)
+    expect(matchSome([a, b, c], 'b_1')).toBe(true)
+    expect(matchSome(a)).toBe(true)
   })
 })
