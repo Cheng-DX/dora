@@ -20,6 +20,9 @@ npm install @chengdx/shared
 - isNumber
 - isSpecial
 - isUpperCase
+- [match](src/match/index.md)
+- matchEvery
+- matchSome
 - [presets](src/presets/index.md)
 - [replaceSubstring](src/replace-substring/index.md)
 - resolveArray

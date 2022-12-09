@@ -8,8 +8,8 @@
 ```ts
 import { type Macther, match, matchSome } from '@chengdx/shared'
 
-const a: Mather = true
-const b: Mather<[path]> = (path: string) => path.startsWith('a')
+const a: Matcher = true
+const b: Matcher<[string]> = (path: string) => path.startsWith('a')
 const c = /^a/
 
 match(a) // true
