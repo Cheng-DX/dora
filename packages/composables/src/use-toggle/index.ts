@@ -14,11 +14,10 @@ export function useToggle(initialValue: MaybeRef<boolean>) {
 }
 
 function createToggle(refVal: Ref<boolean>) {
-  const toggle = (newVal?: boolean) => {
+  return (newVal?: boolean) => {
     if (typeof newVal === 'boolean')
       refVal.value = newVal
     else
       refVal.value = !refVal.value
   }
-  return toggle
 }
