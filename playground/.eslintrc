@@ -1,8 +1,0 @@
-{
-  "extends": "@antfu",
-  "rules": {
-    "arrow-parens": "off",
-    "vue/valid-attribute-name": "off"
-  },
-  "ignorePatterns": "docs/"
-}
