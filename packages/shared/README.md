@@ -3,6 +3,7 @@ Utils
 > some useful utils
 - Tree shakable 🌲
 - TypeScript 🦕
+- No dependencies 🚫
 
 ### install
 ```sh

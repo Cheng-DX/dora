@@ -20,7 +20,7 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "prepublishOnly": "nr build",
-    "test": "pnpm -r --filter './packages/**' run test --config ../../vitest.config.ts",
+    "test": "pnpm -r --filter './packages/**' run test",
     "typecheck": "tsc --noEmit",
     "play": "cd playground && nr dev",
     "presets": "nr build && tsx ./scripts/generatePresets.ts",
