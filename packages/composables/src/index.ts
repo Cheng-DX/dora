@@ -6,5 +6,6 @@ export * from './use-max'
 export * from './use-local-storage'
 export * from './use-event-listener'
 export * from './use-toggle'
+export * from './use-options'
 
 export * from './utils'

@@ -19,6 +19,7 @@ npm install @chengdx/composables
 - [useFormatNaming](src/use-format-naming/index.md)
 - [useLocalStorage](src/use-local-storage/index.md)
 - [useMax](src/use-max/index.md)
+- [useOptions](src/use-options/index.md)
 - [useTheme](src/use-theme/index.md)
 - [useToggle](src/use-toggle/index.md)
 <!-- FUNCTIONS END -->

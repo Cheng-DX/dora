@@ -8,6 +8,7 @@ export default {
     'useFormatNaming',
     'useLocalStorage',
     'useMax',
+    'useOptions',
     'useTheme',
     'useToggle',
   ],
