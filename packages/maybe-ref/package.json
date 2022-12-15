@@ -1,7 +1,7 @@
 {
   "name": "@chengdx/maybe-ref",
   "type": "module",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "packageManager": "pnpm@7.17.0",
   "description": "MaybeRef, MaybeComputedRef or something stuff you used in vueuse",
   "author": "Cheng-DX",
