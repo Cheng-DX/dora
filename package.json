@@ -16,11 +16,11 @@
   "keywords": [],
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm -r run build",
+    "build": "turbo run build --filter './packages/**'",
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "prepublishOnly": "nr build",
-    "test": "pnpm -r --filter './packages/**' run test",
+    "test": "turbo run test --filter './packages/**'",
     "typecheck": "tsc --noEmit",
     "play": "cd playground && nr dev",
     "presets": "nr build && tsx ./scripts/generatePresets.ts",
@@ -48,6 +48,7 @@
     "minimist": "^1.2.7",
     "pkg-exports": "^0.1.2",
     "pnpm": "^7.14.0",
+    "turbo": "^1.6.3",
     "typescript": "^4.8.4",
     "unbuild": "^0.8.11",
     "vitest": "^0.25.7"

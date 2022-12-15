@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "paths": {
       "@chengdx/components": [
-        "./packages/components/src/index.ts"
+        "./packages/components/src"
       ],
       "@chengdx/composables": [
         "./packages/composables/src/index.ts"

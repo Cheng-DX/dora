@@ -13,6 +13,30 @@
     "paths": {
       "~/*": [
         "src/*"
+      ],
+      "@chengdx/components": [
+        "../packages/components/src"
+      ],
+      "@chengdx/composables": [
+        "../packages/composables/src/index.ts"
+      ],
+      "@chengdx/defa": [
+        "../packages/defa/src/index.ts"
+      ],
+      "@chengdx/default-export-resolver": [
+        "../packages/default-export-resolver/src/index.ts"
+      ],
+      "@chengdx/maybe-ref": [
+        "../packages/maybe-ref/src/index.ts"
+      ],
+      "@chengdx/naive-ui": [
+        "../packages/naive-ui/src/index.ts"
+      ],
+      "@chengdx/shared": [
+        "../packages/shared/src/index.ts"
+      ],
+      "@chengdx/use-echarts": [
+        "../packages/use-echarts/src/index.ts"
       ]
     },
     "lib": [

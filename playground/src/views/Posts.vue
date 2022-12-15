@@ -35,7 +35,7 @@ const resolvedRepos = computed<{
   time: number
   link?: string
 }[]>(() => {
-  return repos.value?.map(repo => {
+  return repos.value?.map((repo) => {
     return {
       title: repo.name,
       time: now,

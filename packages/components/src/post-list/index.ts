@@ -1,6 +1,7 @@
 import type { ComputedRef, DefineComponent } from 'vue'
 import { computed, defineComponent, h, inject, provide, ref, watchEffect } from 'vue'
-import { type MaybeComputedRef, resolveUnref, useElementBounding, useEventListener } from '@vueuse/core'
+import { useElementBounding, useEventListener } from '@vueuse/core'
+import { useMax } from '@chengdx/composables'
 
 export const PostContainer = defineComponent({
   name: 'PostContainer',
@@ -102,14 +103,3 @@ export const PostItem = defineComponent({
     ])
   },
 })
-
-function useMax(max: MaybeComputedRef<number>) {
-  const _value = ref(0)
-
-  function set(value: number) {
-    if (value < resolveUnref(max))
-      _value.value = value
-  }
-
-  return [_value, set] as const
-}

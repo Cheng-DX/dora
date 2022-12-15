@@ -12,3 +12,5 @@ temp
 
 packages/*/LICENSE
 playground/pnpm-lock.yaml
+
+.turbo
