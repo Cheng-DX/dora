@@ -38,7 +38,7 @@
       "@chengdx/use-echarts": [
         "./packages/use-echarts/src/index.ts"
       ]
-    },
+    }
   },
   "include": [
     "**/**/*.ts"

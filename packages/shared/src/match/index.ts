@@ -24,7 +24,8 @@ export function match<Args extends Array<any> = []>(
   ...args: Args
 ): boolean {
   if (v instanceof RegExp) {
-    if (args.length !== 1) return false
+    if (args.length !== 1)
+      return false
     return v.test(args[0])
   }
   return resolveCallable(v, ...args)

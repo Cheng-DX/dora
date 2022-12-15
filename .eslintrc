@@ -1,3 +1,7 @@
 {
-  "extends": "@antfu"
+  "extends": "@antfu",
+  "rules": {
+    "arrow-parens": "off",
+    "vue/one-component-per-file": "off"
+  }
 }
