@@ -36,14 +36,11 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "prepublishOnly": "nr build",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.27.0",
     "@types/node": "^18.8.5",
-    "eslint": "^8.25.0",
     "typescript": "^4.8.4",
     "unbuild": "^0.8.11",
     "vitest": "^0.24.1"

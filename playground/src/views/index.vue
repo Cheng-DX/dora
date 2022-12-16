@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLocalStorage } from '@chengdx/composables'
+import { useLocalStorage } from '../../../packages/composables/src'
 import UseSelection from './UseSelection.vue'
 import Transformer from './Transformer.vue'
 import Posts from './Posts.vue'

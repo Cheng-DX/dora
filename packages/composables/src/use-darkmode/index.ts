@@ -1,4 +1,4 @@
-import { useLocalStorage, useToggle } from '../'
+import { useLocalStorage, useToggle } from '..'
 
 export function useDarkmode() {
   const darkmode = useLocalStorage('ls_value_from_@chengdx/composables/darkmode', false)

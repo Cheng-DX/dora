@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Moon, Sunny } from '@vicons/ionicons5'
-import { useDarkmode } from '@chengdx/composables'
+import { useDarkmode } from '../../../../../packages/composables/src'
 
 const { darkmode, toggleDarkmode } = useDarkmode()
 const iconColor = computed(() => darkmode.value ? '#d03050' : '#2080f0')

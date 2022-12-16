@@ -15,7 +15,7 @@
         "src/*"
       ],
       "@chengdx/components": [
-        "../packages/components/src"
+        "../packages/components/src/index.ts"
       ],
       "@chengdx/composables": [
         "../packages/composables/src/index.ts"
