@@ -44,6 +44,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '~': fileURLToPath(new URL('src', import.meta.url)),
+      '@chengdx/components': fileURLToPath(new URL('../packages/components/src', import.meta.url)),
+      '@chengdx/composables': fileURLToPath(new URL('../packages/composables/src', import.meta.url)),
+      '@chengdx/defa': fileURLToPath(new URL('../packages/defa/src', import.meta.url)),
+      '@chengdx/default-export-resolver': fileURLToPath(new URL('../packages/default-export-resolver/src', import.meta.url)),
+      '@chengdx/maybe-ref': fileURLToPath(new URL('../packages/maybe-ref/src', import.meta.url)),
+      '@chengdx/shared': fileURLToPath(new URL('../packages/shared/src', import.meta.url)),
+      '@chengdx/use-echarts': fileURLToPath(new URL('../packages/use-echarts/src', import.meta.url)),
+      '@chengdx/naive-ui': fileURLToPath(new URL('../packages/naive-ui/src', import.meta.url)),
     },
   },
 })

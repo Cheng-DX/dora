@@ -4,7 +4,7 @@
   "packageManager": "pnpm@7.17.0",
   "scripts": {
     "dev": "vite",
-    "build": "echo 'build'",
+    "build": "vite build",
     "preview": "vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",

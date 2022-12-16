@@ -1,17 +1,16 @@
-import { computed, ref } from 'vue'
-import type { MaybeComputedRef } from '@chengdx/maybe-ref'
-import { resolveUnref } from '@chengdx/maybe-ref'
+import { computed, ref, unref } from 'vue'
+import type { MaybeRef } from '@chengdx/maybe-ref'
 
 export function useSelection<T extends Object>(
-  _options: MaybeComputedRef<{
+  _options: MaybeRef<{
     label: string
     value: T
   }[]>,
 ) {
-  const selected = ref<string>()
-  const selectedT = computed<T>(() => {
+  const value = ref<string>()
+  const selected = computed<T>(() => {
     try {
-      return JSON.parse(selected.value || '{}')
+      return JSON.parse(value.value || '{}')
     }
     catch (e) {
       return {}
@@ -19,7 +18,7 @@ export function useSelection<T extends Object>(
   })
   const options = computed(() => {
     try {
-      const os = resolveUnref(_options).map((option) => {
+      const os = unref(_options).map((option) => {
         return {
           label: option.label,
           value: JSON.stringify(option.value),
@@ -34,7 +33,7 @@ export function useSelection<T extends Object>(
 
   return {
     selected,
-    selectedT,
+    value,
     options,
   }
 }

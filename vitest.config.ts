@@ -15,6 +15,7 @@ export default defineConfig({
       '@chengdx/maybe-ref': resolve(__dirname, 'packages/maybe-ref/src'),
       '@chengdx/shared': resolve(__dirname, 'packages/shared/src'),
       '@chengdx/use-echarts': resolve(__dirname, 'packages/use-echarts/src'),
+      '@chengdx/naive-ui': resolve(__dirname, 'packages/naive-ui/src'),
     },
   },
 })

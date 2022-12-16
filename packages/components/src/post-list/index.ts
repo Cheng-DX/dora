@@ -1,7 +1,7 @@
 import type { ComputedRef, DefineComponent } from 'vue'
 import { computed, defineComponent, h, inject, provide, ref, watchEffect } from 'vue'
 import { useElementBounding, useEventListener } from '@vueuse/core'
-import { useMax } from '../../../composables/src'
+import { useMax } from '@chengdx/composables'
 
 export const PostContainer = defineComponent({
   name: 'PostContainer',

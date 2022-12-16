@@ -13,17 +13,22 @@ const _options = randomObject.map(i => ({
   value: i,
 }))
 
-const { selected, selectedT, options } = useSelection(_options)
-</script>
+const { selected, options, value } = useSelection(_options)
+
+watch(value, () => {
+  console.log('selected changed')
+  console.log(value, selected)
+})
+</script>/
 
 <template>
-  <n-select v-model:value="selected" :options="options" />
+  <n-select v-model:value="value" :options="options" />
   <div>
-    {{ selected }}
-    {{ typeof selected }}
+    {{ value }}
+    {{ typeof value }}
   </div>
-  {{ selectedT }}
-  {{ typeof selectedT }}
+  {{ selected }}
+  {{ typeof selected }}
   <pre>
     {{ options }}
   </pre>
