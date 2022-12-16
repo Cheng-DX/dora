@@ -1,7 +1,8 @@
 import type { MaybeComputedElementRef } from '@chengdx/maybe-ref'
 import { resolveUnref } from '@chengdx/maybe-ref'
 import { onMounted, onUnmounted, watch } from 'vue'
-import { noop } from '../utils'
+
+const noop = () => {}
 
 export function useEventListener<E extends keyof WindowEventMap>(
   event: E,

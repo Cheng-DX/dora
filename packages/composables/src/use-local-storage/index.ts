@@ -1,7 +1,7 @@
 import type { Ref } from 'vue'
 import { onUnmounted, ref, watch } from 'vue'
+import { createHandlers } from '@chengdx/shared'
 import { useEventListener } from '../use-event-listener'
-import { createEventHandlers } from '../utils'
 
 interface UseLocalStorageEvent<T = unknown> {
   key: string
@@ -10,7 +10,7 @@ interface UseLocalStorageEvent<T = unknown> {
   newValue: T
 }
 
-const { registerHandler, triggerHandlers } = createEventHandlers<(event: UseLocalStorageEvent) => void>()
+const { registerHandler, triggerHandlers } = createHandlers<(event: UseLocalStorageEvent) => void>()
 
 export function useLocalStorage<T>(key: string, initialValue: T): Ref<T> {
   function setValue(newValue: T, oldValue?: T) {

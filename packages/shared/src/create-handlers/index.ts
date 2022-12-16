@@ -1,6 +1,6 @@
 type DefaultHandler = () => void
 
-export function createEventHandlers<H extends (...args: any) => void = DefaultHandler>() {
+export function createHandlers<H extends (...args: any) => void = DefaultHandler>() {
   const handlers = new Set<H>()
 
   function registerHandler(handler: H) {
