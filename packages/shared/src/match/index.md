@@ -1,27 +1,70 @@
 ## `match`, `matchSome`, `matchEvery` and type `Mather`
 
-> Help resolve match for given value. Pure boolean value, function or regex are all supported.
+> Help handle the given value and check if it matches your rule(s).
+- Pure boolean value, function or regex are all supported.
+- match single, multiple or all of the given value(s).
+- match some or match every for the given value(s).
 
+### The Matchers
+> There are 3 types of matchers, pure boolean value, function and regex.
+- Pure value, like true or false
+```ts
+const pureBoolMatcher: Matcher = true
+```
+
+- Function, which will be called with the given value
+```ts
+const matchPathStartWithA: Matcher<[string]> = (path: string) => path.startsWith('a')
+//                                 ^^^^^^^^ -----> the generic means the type of args, it MUST be an array
+// However, you can also ignore the generic, the TS server will infer the type for you
+
+match(matchPathStartWithA, 'a') // true
+//                         ^^^ -----> the target value
+match(matchPathStartWithA, 'b') // false
+```
+
+- Regex, which will be called with the given value
+```ts
+const regexMatcher: Matcher = /^a_/
+
+match(regexMatcher, 'a') // true
+match(regexMatcher, 'b') // false
+```
+
+### match mutiple mathers: `matchSome` and `matchEvery`
 > `matchSome` will return true if any of the given value matches.
 > `matchEvery` will return true if all of the given value matches.
 
 ```ts
-import { type Macther, match, matchSome } from '@chengdx/shared'
+const pureBoolMatcher: Matcher = true
+const functionalMatcher: Matcher<[string]> = (path: string) => path.startsWith('a')
+const regexMatcher: Matcher = /^a_/
 
-const a: Matcher = true
-const b: Matcher<[string]> = (path: string) => path.startsWith('a')
-const c = /^a/
+matchSome([
+  pureBoolMatcher, // will be true
+  functionalMatcher, // path.startsWith('a') will be true
+  regexMatcher, // /^a_/.test('a') will be true
+], 'a_1') // true
 
-match(a) // true
+matchSome([
+  pureBoolMatcher, // will be true
+  functionalMatcher, // path.startsWith('a') will be false
+  regexMatcher, // /^a_/.test('b') will be false
+], 'b_1') // true (because of pureBoolMatcher)
 
-match(b, 'a') // true
-match(b, 'b') // false
+matchEvery([
+  pureBoolMatcher,
+  functionalMatcher,
+  regexMatcher
+], 'a_1') // true
+matchEvery([
+  pureBoolMatcher,
+  functionalMatcher,
+  regexMatcher
+], 'b_1') // false
 
-match(c, 'a') // true
-match(c, 'b') // false
-
-matchSome([a, b, c], 'a_1') // true
-matchSome([a, b, c], 'b_1') // false
-
-matchSome(a) // true
+// You can use single matcher as well, it will be transformed to an array
+// It's useful when you don't know the type of matcher
+matchSome(pureBoolMatcher) // true
+matchEvery(pureBoolMatcher) // true
 ```
