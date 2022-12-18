@@ -11,8 +11,6 @@ npm install @chengdx/composables
 ```
 
 <!-- FUNCTIONS START -->
-- createEventHandlers
-- noop
 - [presets](src/presets/index.md)
 - [useDarkmode](src/use-darkmode/index.md)
 - [useEventListener](src/use-event-listener/index.md)

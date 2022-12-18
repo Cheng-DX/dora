@@ -1,7 +1,5 @@
 export default {
   '@chengdx/composables': [
-    'createEventHandlers',
-    'noop',
     'presets',
     'useDarkmode',
     'useEventListener',

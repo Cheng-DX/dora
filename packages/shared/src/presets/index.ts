@@ -1,10 +1,13 @@
 export default {
   '@chengdx/shared': [
     'capitalize',
-    'charIs',
+    'charMatches',
     'createArray',
+    'createHandlers',
     'formatNaming',
+    'getFile',
     'indexOfFirstLetter',
+    'indexOfFirstMacthes',
     'isLetter',
     'isLowerCase',
     'isNumber',

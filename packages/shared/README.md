@@ -12,10 +12,13 @@ npm install @chengdx/shared
 
 <!-- FUNCTIONS START -->
 - capitalize
-- charIs
+- charMatches
 - [createArray](src/create-array/index.md)
+- [createHandlers](src/create-handlers/index.md)
 - [formatNaming](src/format-naming/index.md)
+- [getFile](src/get-file/index.md)
 - indexOfFirstLetter
+- indexOfFirstMacthes
 - isLetter
 - isLowerCase
 - isNumber
