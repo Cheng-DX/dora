@@ -1,14 +1,14 @@
 <br>
 
 <p align="center">
-<img width="100px" src="https://api.iconify.design/arcticons:folder-utilities.svg?color=%23a88a8a"/>
+<img width="100px" src="https://api.iconify.design/arcticons:pocket.svg?color=%230185cc"/>
 </p>
 
-<h1 align="center">Utils</h1>
+<h1 align="center">Dora</h1>
 
-<p align="center">Make a <code>script</code> for everything did more than once</p>
+<p align="center">List of packages I used, it's my <code>Doraemon</code></p>
 
-## List
+## Packages
 - [compoables](./packages/composables/README.md): Composable functions for Vue.js
 - [default-export-resolver](./packages/default-export-resolver/README.md): Help to generate default export for `unplugin-vue-components` and `unplugin-auto-import`
 - [shared](./packages/shared/README.md): Shared utils

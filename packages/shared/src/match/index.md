@@ -21,6 +21,11 @@ const matchPathStartWithA: Matcher<[string]> = (path: string) => path.startsWith
 match(matchPathStartWithA, 'a') // true
 //                         ^^^ -----> the target value
 match(matchPathStartWithA, 'b') // false
+
+// Mutiple args
+const matchFileInSrc: Matcher<[string, string]> = (path: string, suffix: string) => path.startsWith('src') && path.endsWith(suffix)
+match(matchPath, 'src/views/index.ts', '.ts') // match ts file in src -> true
+match(matchPath, 'src/views/index.ts', '.js') // match js file in src -> false
 ```
 
 - Regex, which will be called with the given value
