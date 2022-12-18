@@ -19,14 +19,13 @@
     "build": "turbo run build --filter './packages/**'",
     "lint": "eslint .",
     "fix": "eslint . --fix",
-    "prepublishOnly": "nr build",
     "test": "turbo run test --filter './packages/**'",
     "typecheck": "tsc --noEmit",
     "play": "cd playground && nr dev",
     "presets": "nr build && tsx ./scripts/generatePresets.ts",
     "add-funs": "tsx ./scripts/addFunctions.ts",
     "patch": "nr presets && nr add-funs",
-    "publish": "pnpm -r --filter './packages/**' publish --access=public",
+    "publish": "nr build && pnpm -r --filter './packages/**' publish --access=public",
     "update": "tsx ./scripts/updateVersion.ts"
   },
   "dependencies": {

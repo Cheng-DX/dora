@@ -44,7 +44,6 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "prepublishOnly": "nr build",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
