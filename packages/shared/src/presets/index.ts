@@ -16,7 +16,6 @@ export default {
     'match',
     'matchEvery',
     'matchSome',
-    'presets',
     'replaceSubstring',
     'resolveArray',
     'resolveCallable',

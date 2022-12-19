@@ -20,7 +20,7 @@ getFile('/src/presets/index.ts', {
 function createPresetsObject(packageName: string, exports: string[]) {
   return `export default {
   '${packageName}': [
-${exports.map(fn => `    '${fn}',`).join('\n')}
+${exports.filter(name => name !== 'presets').map(fn => `    '${fn}',`).join('\n')}
   ],
 }
 `
