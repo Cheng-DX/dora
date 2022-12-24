@@ -8,15 +8,18 @@ export function useSelection<T extends Object>(
     label: string
     value: T
   }[]>,
-  /**
+  _?: {
+    /**
    * render object to vNode
    */
-  renderer?: (selected: T) => VNodeChild,
+    renderer?: (selected: T) => VNodeChild
+  },
 ) {
   const value = ref<string>()
   const selected = computed<T>(() => {
     return value2Object(value.value)
   })
+  const { renderer } = _ || {}
   const options = computed(() => {
     try {
       const os = unref(_options).map((option) => {
