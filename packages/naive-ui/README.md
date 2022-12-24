@@ -13,8 +13,11 @@ npm install @chengdx/naive-ui
 
 <!-- FUNCTIONS START -->
 - [createMenu](src/create-menu/index.md)
+- createPropsPreset
 - [presets](src/presets/index.md)
 - [renderIcon](src/render-icon/index.md)
+- roundButton
+- roundTag
 - [useSelection](src/use-selection/index.md)
 <!-- FUNCTIONS END -->
 

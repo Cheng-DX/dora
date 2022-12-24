@@ -16,7 +16,6 @@ npm install @chengdx/shared
 - [createArray](src/create-array/index.md)
 - [createHandlers](src/create-handlers/index.md)
 - [formatNaming](src/format-naming/index.md)
-- [getFile](src/get-file/index.md)
 - indexOfFirstLetter
 - indexOfFirstMacthes
 - isLetter
