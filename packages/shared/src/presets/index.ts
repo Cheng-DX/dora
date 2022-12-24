@@ -5,7 +5,6 @@ export default {
     'createArray',
     'createHandlers',
     'formatNaming',
-    'getFile',
     'indexOfFirstLetter',
     'indexOfFirstMacthes',
     'isLetter',
