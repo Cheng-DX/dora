@@ -1,36 +1,42 @@
 <script setup lang="ts">
-import type { SelectOption } from 'naive-ui'
-import { useSelection } from '@chengdx/naive-ui'
+import { NSelect, NSpace, NTag, type TagProps } from 'naive-ui'
+import { roundTag, useSelection } from '@chengdx/naive-ui'
 
-const randomObject = [1, 2, 3].map(n => ({
-  id: n,
-  name: `name${n}`,
-  age: n * 10,
-}))
-
-const _options = randomObject.map(i => ({
-  label: i.name,
+const type = ref('success')
+const types = ['success', 'error', 'warning', 'info', 'default'].map(i => ({
+  label: i,
   value: i,
 }))
-
-const { selected, options, value } = useSelection(_options)
-
-watch(value, () => {
-  console.log('selected changed')
-  console.log(value, selected)
-})
-</script>/
+const t = roundTag(() => ({
+  type: type.value as any,
+  size: 'tiny',
+}))
+const { selected, options, value, renderLabel } = useSelection(
+  [1, 2, 3].map(i => ({
+    label: `label${i}`,
+    value: {
+      id: i,
+      name: `name${i}`,
+      age: i * 10,
+    },
+  }),
+  ), {
+    renderer: selected => {
+      return h(NSpace, {}, [
+        h(NTag, t.value, `${selected.age}岁`),
+        h(NTag, null, `${selected.name}`),
+        h(NTag, null, `${selected.id}`),
+      ])
+    },
+  },
+)
+</script>
 
 <template>
-  <n-select v-model:value="value" :options="options" />
-  <div>
-    {{ value }}
-    {{ typeof value }}
-  </div>
-  {{ selected }}
-  {{ typeof selected }}
+  <NSelect v-model:value="type" :options="types" />
+  <NSelect v-model:value="value" style="width: 300px" :options="options" :render-label="renderLabel" />
   <pre>
-    {{ options }}
+    {{ selected }}
   </pre>
 </template>
 

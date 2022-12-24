@@ -3,6 +3,7 @@ import { useLocalStorage } from '@chengdx/composables'
 import UseSelection from './UseSelection.vue'
 import Transformer from './Transformer.vue'
 import Posts from './Posts.vue'
+import PropsPresets from './PropsPresets.vue'
 
 const count = useLocalStorage('count', 0)
 const inc = () => count.value++
@@ -17,6 +18,7 @@ const count2 = useLocalStorage('count', 0)
   <!-- <Posts /> -->
   <UseSelection />
   <Transformer />
+  <PropsPresets />
 </template>
 
 <style scoped>
