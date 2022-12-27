@@ -9,7 +9,7 @@ const types = ['success', 'error', 'warning', 'info', 'default'].map(i => ({
 }))
 const t = roundTag(() => ({
   type: type.value as any,
-  size: 'tiny',
+  size: 'small',
 }))
 const { selected, options, value, renderLabel } = useSelection(
   [1, 2, 3].map(i => ({
@@ -22,10 +22,10 @@ const { selected, options, value, renderLabel } = useSelection(
   }),
   ), {
     renderer: selected => {
-      return h(NSpace, {}, [
+      return h(NSpace, { align: 'center' }, [
         h(NTag, t.value, `${selected.age}岁`),
-        h(NTag, null, `${selected.name}`),
-        h(NTag, null, `${selected.id}`),
+        h(NTag, t.value, `${selected.name}`),
+        h(NTag, t.value, `${selected.id}`),
       ])
     },
   },
@@ -34,7 +34,7 @@ const { selected, options, value, renderLabel } = useSelection(
 
 <template>
   <NSelect v-model:value="type" :options="types" />
-  <NSelect v-model:value="value" style="width: 300px" :options="options" :render-label="renderLabel" />
+  <NSelect v-model:value="value" style="width: 230px" :options="options" :render-label="renderLabel" />
   <pre>
     {{ selected }}
   </pre>
