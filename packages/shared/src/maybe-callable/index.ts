@@ -1,3 +1,5 @@
+import { isFunction } from '../is'
+
 export type MaybeCallable<
   T,
   Args extends Array<any> = any,
@@ -7,7 +9,7 @@ export function resolveCallable<T, Args extends Array<any>>(
   v: MaybeCallable<T, Args>,
   ...args: Args
 ): T {
-  return typeof v === 'function'
-    ? (v as any)(...args)
+  return isFunction(v)
+    ? v(...args)
     : v
 }
