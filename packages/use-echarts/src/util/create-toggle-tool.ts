@@ -65,8 +65,8 @@ export function createToggleTool(
     }
   })
 
-  return {
+  return [
     tool,
     v,
-  }
+  ] as const
 }
