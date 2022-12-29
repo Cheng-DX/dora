@@ -1,6 +1,6 @@
 import type { EChartsOption } from 'echarts'
 
-const baseConfig: EChartsOption = {
+export const defaultConfig: EChartsOption = {
   title: {
     text: 'chart',
   },
@@ -25,5 +25,3 @@ const baseConfig: EChartsOption = {
   },
   backgroundColor: 'transparent',
 }
-
-export default baseConfig

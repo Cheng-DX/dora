@@ -24,6 +24,9 @@ export function indexOfFirstLetter(str: string) {
 }
 
 export function capitalize(str: string, options?: {
+  /**
+   * @default false
+   */
   ignoreNonLetters: boolean
 }) {
   if (!str || str.length === 0)

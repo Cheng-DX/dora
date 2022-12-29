@@ -7,6 +7,7 @@ export default {
     'formatNaming',
     'indexOfFirstLetter',
     'indexOfFirstMacthes',
+    'isFunction',
     'isLetter',
     'isLowerCase',
     'isNumber',

@@ -18,6 +18,7 @@ npm install @chengdx/shared
 - [formatNaming](src/format-naming/index.md)
 - indexOfFirstLetter
 - indexOfFirstMacthes
+- isFunction
 - isLetter
 - isLowerCase
 - isNumber

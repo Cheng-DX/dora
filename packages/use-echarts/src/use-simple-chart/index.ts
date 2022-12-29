@@ -1,18 +1,19 @@
-import type { MaybeComputedRef } from '@chengdx/maybe-ref'
+import type { MaybeComputedRef, MaybeRef } from '@chengdx/maybe-ref'
 import { resolveUnref } from '@chengdx/maybe-ref'
 import defu from 'defu'
-import type { EChartsOption } from 'echarts'
+import type { EChartsOption, SeriesOption } from 'echarts'
 import { computed } from 'vue'
 import { useChart } from '../use-chart'
-import type { DataType, EChartOptionSeries } from '../types'
+
+export type DataType = string | number
 
 export function useSimpleChart(
   x: MaybeComputedRef<DataType[]>,
+  series: MaybeComputedRef<SeriesOption>,
   title: MaybeComputedRef<string>,
-  series: MaybeComputedRef<EChartOptionSeries>,
   options: {
     custom?: MaybeComputedRef<EChartsOption>
-    tools?: MaybeComputedRef<EChartsOption[]>
+    tools?: MaybeRef<EChartsOption>[]
   } = {},
 ) {
   const { custom = {}, tools } = options

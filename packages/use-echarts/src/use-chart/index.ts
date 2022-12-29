@@ -3,7 +3,7 @@ import { resolveRef } from '@chengdx/maybe-ref'
 import { defu } from 'defu'
 import { computed, unref } from 'vue'
 import type { EChartsOption, SeriesOption } from 'echarts'
-import baseConfig from '../base/base-config'
+import { getBase } from '../base-config'
 
 export function useChart(
   series: MaybeComputedRef<SeriesOption>,
@@ -17,7 +17,7 @@ export function useChart(
   const seriesRef = resolveRef(series)
 
   const base = computed(() => {
-    return defu(customRef.value, baseConfig, ...tools.map(unref))
+    return defu(customRef.value, getBase(), ...tools.map(unref))
   })
 
   const option = computed<EChartsOption>(() => {

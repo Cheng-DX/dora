@@ -4,7 +4,7 @@
 > Recommend to use with [vue-echarts](https://github.com/ecomfe/vue-echarts).
 
 <!-- FUNCTIONS START -->
-- createToggleTool
+- [createToggleTool](src/create-toggle-tool/index.md)
 - [presets](src/presets/index.md)
 - [useChart](src/use-chart/index.md)
 - [useSimpleChart](src/use-simple-chart/index.md)
