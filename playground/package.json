@@ -36,6 +36,7 @@
     "@vicons/ionicons5": "^0.12.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "echarts": "^5.4.0",
     "eslint": "^8.29.0",
     "naive-ui": "^2.34.2",
     "typescript": "^4.9.4",
@@ -46,6 +47,7 @@
     "vite": "^4.0.0",
     "vite-plugin-inspect": "^0.7.10",
     "vitest": "^0.24.5",
+    "vue-echarts": "^6.2.3",
     "vue-tsc": "latest"
   }
 }

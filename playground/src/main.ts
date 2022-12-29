@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from '~/router'
 
 import 'uno.css'
+import '~/configs/echarts'
 
 const app = createApp(App)
 app.use(router)

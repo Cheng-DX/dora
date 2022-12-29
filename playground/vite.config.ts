@@ -7,6 +7,7 @@ import AutoImportComponents from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Inspect from 'vite-plugin-inspect'
 import UnoCSS from 'unocss/vite'
+import { defaultExportResolver } from '@chengdx/default-export-resolver'
 
 export default defineConfig({
   plugins: [
@@ -37,6 +38,9 @@ export default defineConfig({
       importPathTransform: path => path.replace(/\.[tj]sx?$/, ''),
       resolvers: [
         NaiveUiResolver(),
+        defaultExportResolver([
+          { name: 'VChart', from: 'vue-echarts' },
+        ]),
       ],
     }),
     Inspect(),
