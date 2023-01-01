@@ -79,4 +79,4 @@ defu(a, { b: 0, c: -1 }) // { b: 1, c: -1 }
 ```
 
 ## License
-[MIT](../LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)
+[MIT](../../LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)
