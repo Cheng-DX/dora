@@ -16,6 +16,7 @@ export default defineConfig({
       '@chengdx/shared': resolve(__dirname, 'packages/shared/src'),
       '@chengdx/use-echarts': resolve(__dirname, 'packages/use-echarts/src'),
       '@chengdx/naive-ui': resolve(__dirname, 'packages/naive-ui/src'),
+      '@chengdx/fs': resolve(__dirname, 'packages/fs/src'),
     },
   },
 })

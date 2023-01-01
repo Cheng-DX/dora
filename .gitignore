@@ -14,4 +14,3 @@ packages/*/LICENSE
 playground/pnpm-lock.yaml
 
 .turbo
-packages/fs

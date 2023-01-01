@@ -37,6 +37,9 @@
       ],
       "@chengdx/use-echarts": [
         "./packages/use-echarts/src/index.ts"
+      ],
+      "@chengdx/fs": [
+        "./packages/fs/src/index.ts"
       ]
     }
   },

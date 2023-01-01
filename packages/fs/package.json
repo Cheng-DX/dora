@@ -1,0 +1,51 @@
+{
+  "name": "@chengdx/fs",
+  "type": "module",
+  "version": "0.11.0",
+  "packageManager": "pnpm@7.17.0",
+  "description": "fs utils",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cheng-DX/dora.git"
+  },
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@chengdx/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4",
+    "unbuild": "^0.8.11",
+    "vitest": "^0.24.1"
+  }
+}

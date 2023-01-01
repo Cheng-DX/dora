@@ -36,7 +36,8 @@
     "@chengdx/maybe-ref": "workspace:*",
     "@chengdx/naive-ui": "workspace:*",
     "@chengdx/shared": "workspace:*",
-    "@chengdx/use-echarts": "workspace:*"
+    "@chengdx/use-echarts": "workspace:*",
+    "@chengdx/fs": "workspace:*"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",

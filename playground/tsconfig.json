@@ -37,6 +37,9 @@
       ],
       "@chengdx/use-echarts": [
         "../packages/use-echarts/src/index.ts"
+      ],
+      "@chengdx/fs": [
+        "../packages/fs/src/index.ts"
       ]
     },
     "lib": [
@@ -57,6 +60,7 @@
     "src/**/*.vue",
     "test/**/*",
     "vitest.config.*",
-    "*.d.ts"
+    "*.d.ts",
+    "*.ts"
   ]
 }
