@@ -6,10 +6,10 @@
   "description": "Vue composable functions",
   "author": "Cheng-DX",
   "license": "MIT",
-  "homepage": "https://github.com/Cheng-DX/utils/tree/main/packages/composables#readme",
+  "homepage": "https://github.com/Cheng-DX/dora/tree/main/packages/composables#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheng-DX/utils.git"
+    "url": "git+https://github.com/Cheng-DX/dora.git"
   },
   "keywords": [],
   "sideEffects": false,

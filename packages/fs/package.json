@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/Cheng-DX/dora.git"
   },
+  "homepage": "https://github.com/Cheng-DX/dora/tree/main/packages/fs#readme",
   "keywords": [],
   "sideEffects": false,
   "exports": {

@@ -6,10 +6,10 @@
   "description": "Help to generate default export for `unplugin-vue-components`",
   "author": "Cheng-DX",
   "license": "MIT",
-  "homepage": "https://github.com/Cheng-DX/utils/tree/main/packages/default-export-resolver#readme",
+  "homepage": "https://github.com/Cheng-DX/dora/tree/main/packages/default-export-resolver#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheng-DX/utils.git"
+    "url": "git+https://github.com/Cheng-DX/dora.git"
   },
   "keywords": [
     "unplugin-vue-components",

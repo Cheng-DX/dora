@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "dora",
   "type": "module",
   "version": "0.11.1",
   "private": true,
@@ -7,12 +7,12 @@
   "description": "Some utils I used",
   "author": "Cheng-DX",
   "license": "MIT",
-  "homepage": "https://github.com/Cheng-DX/utils#readme",
+  "homepage": "https://github.com/Cheng-DX/dora#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheng-DX/utils.git"
+    "url": "git+https://github.com/Cheng-DX/dora.git"
   },
-  "bugs": "https://github.com/Cheng-DX/utils/issues",
+  "bugs": "https://github.com/Cheng-DX/dora/issues",
   "keywords": [],
   "sideEffects": false,
   "scripts": {

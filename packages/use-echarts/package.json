@@ -6,10 +6,10 @@
   "description": "Composable echarts functions for Vue.js",
   "author": "Cheng-DX",
   "license": "MIT",
-  "homepage": "https://github.com/Cheng-DX/utils/tree/main/utils/use-echarts#readme",
+  "homepage": "https://github.com/Cheng-DX/dora/tree/main/packages/use-echarts#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheng-DX/utils.git"
+    "url": "git+https://github.com/Cheng-DX/dora.git"
   },
   "keywords": [],
   "sideEffects": false,
