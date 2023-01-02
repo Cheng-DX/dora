@@ -1,21 +1,28 @@
 import fs from 'fs'
+import { resolve } from 'path'
 import { getExportsRuntime } from 'pkg-exports'
 import consola from 'consola'
-import type { Package } from './getPackages'
-import { getFile } from './getPackages'
+import { getFile as file } from '@chengdx/fs'
+import { get } from './getPackages'
 
-const exclued: Package[] = [
+const exclued: string[] = [
   '@chengdx/default-export-resolver',
   '@chengdx/defa',
 ]
 
-getFile('/src/presets/index.ts', {
-  filter: pkg => !exclued.includes(pkg),
-}).forEach(async ({ pkg, path }) => {
-  const exports: string[] = await getExportsRuntime(pkg)
-  fs.writeFileSync(path, createPresetsObject(pkg, exports))
-  consola.success(`Generated presets for ${pkg}`)
-})
+async function generate() {
+  const pkgs = await get(pkg => !exclued.includes(pkg.manifest.name!))
+
+  pkgs.forEach(async ({ dir, manifest: { name } }) => {
+    const exports: string[] = await getExportsRuntime(name!)
+    if (exports.length === 0)
+      return
+    const { path } = file(resolve(dir, 'src/presets/index.ts'))
+    fs.writeFileSync(path, createPresetsObject(name!, exports))
+    consola.success(`Generated presets for ${name!}`)
+  })
+}
+generate()
 
 function createPresetsObject(packageName: string, exports: string[]) {
   return `export default {
