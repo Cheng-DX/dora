@@ -216,16 +216,32 @@ const logs = log.split('\n')
   })
   .reverse()
 
-for (let i = 0; i < logs.length - 1; i++) {
-  const { hash } = logs[i]
-  const next = logs[i + 1]
-  execSync(`npx changelogen --to=${hash} --from=${next.hash} --output`)
+// generate changelog
+function generateChangelog() {
+  for (let i = 0; i < logs.length - 1; i++) {
+    const { hash } = logs[i]
+    const next = logs[i + 1]
+    execSync(`npx changelogen --to=${hash} --from=${next.hash} --output`)
+  }
+}
+let file = readFileSync(resolve('CHANGELOG.md'), 'utf-8')
+function rewriteTitle() {
+  for (let i = 0; i < logs.length - 1; i++) {
+    const { hash } = logs[i]
+    const next = logs[i + 1]
+    file = file.replaceAll(`${next.hash}...${hash}`, next.version!)
+  }
+}
+function rewriteLink() {
+  // replace hash with link
+  for (const matched of file.matchAll(/(\([a-z0-9]{7}\))/g)) {
+    const [hash] = matched
+    file = file.replace(hash, `[${hash}](https://github.com/Cheng-DX/dora/commit/${hash.slice(1, -1)})`)
+  }
 }
 
-let file = readFileSync(resolve('../CHANGELOG.md'), 'utf-8')
-for (let i = 0; i < logs.length - 1; i++) {
-  const { hash } = logs[i]
-  const next = logs[i + 1]
-  file = file.replaceAll(`${next.hash}...${hash}`, next.version!)
-}
-writeFileSync(resolve('../CHANGELOG.md'), file)
+// generateChangelog()
+// rewriteTitle()
+// rewriteLink()
+
+writeFileSync(resolve('CHANGELOG.md'), file)
