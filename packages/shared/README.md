@@ -13,6 +13,7 @@ npm install @chengdx/shared
 - `array`
   - [createArray](src/array/create-array/index.md)
   - [groupArray](src/array/group/index.md)
+  - [mountGroup](src/array/group/index.md)
   - [MaybeArray](src/array/transform-tp-array/index.md) ![TS type](https://api.iconify.design/logos:typescript-icon.svg?color=%230185cc&height=10)
   - [resolveArray](src/array/transform-to-array/index.md)
   - [ArrayLike](src/array/to-array/index.md) ![TS type](https://api.iconify.design/logos:typescript-icon.svg?color=%230185cc&height=10)
@@ -34,7 +35,7 @@ npm install @chengdx/shared
 - [is](src/is/index.md)
   - isFunction
 - [match](src/match/index.md)
-  - [Match](src/match/index.md) ![TS type](https://api.iconify.design/logos:typescript-icon.svg?color=%230185cc&height=10)
+  - [Matcher](src/match/index.md) ![TS type](https://api.iconify.design/logos:typescript-icon.svg?color=%230185cc&height=10)
   - matchEvery
   - matchSome
 - [MaybeCallable](src/maybe-callable/index.md) ![TS type](https://api.iconify.design/logos:typescript-icon.svg?color=%230185cc&height=10)

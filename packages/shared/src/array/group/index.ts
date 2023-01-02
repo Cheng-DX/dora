@@ -29,20 +29,15 @@ export function groupArray<T>(
 }
 
 /**
- * Mount group function to Array.prototype.$group
- * To get TypeScript support, add this:
- * ```ts
- * interface Array<T> {
- *   $group(callback: (element: T, index: number, array: T[]) => (string | symbol), thisArg?: any): { [key: (string | symbol)]: T[]
- * }
- * ```
+ * Mount group function to Array.prototype.[key]
+ * @param key the key of the function, default is '$group'
  */
-export function mountGroup() {
+export function mountGroup(key?: string) {
   function group<T>(this: ArrayLike<T>, callback: GroupArrayCallback<T>, thisArg?: any) {
     return groupArray(this, callback, thisArg)
   }
   // eslint-disable-next-line no-extend-native
-  Object.defineProperty(Array.prototype, '$group', {
+  Object.defineProperty(Array.prototype, key ?? '$group', {
     value: group,
     enumerable: false,
   })
