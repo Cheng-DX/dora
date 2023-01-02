@@ -465,5 +465,17 @@
 
   - Add test for default-- [038122c](https://github.com/Cheng-DX/dora/commit/038122c)
 
+## v0.1.1
+### 🚀 Enhancements
+  - **shared:** Add `MaybeCallable` [(c84ae03)](https://github.com/Cheng-DX/dora/commit/c84ae03)
+### 🏡 Chore
 
+  - Update [(6f61e93)](https://github.com/Cheng-DX/dora/commit/6f61e93)
+  - Update [(53a88ff)](https://github.com/Cheng-DX/dora/commit/53a88ff)
+  - Change github name [(9ccfb08)](https://github.com/Cheng-DX/dora/commit/9ccfb08)
+  - Update scope [(6878d5b)](https://github.com/Cheng-DX/dora/commit/6878d5b)
+
+# ❤️  Contributors
+
+- Cheng-DX <2337040896@qq.com>
 
