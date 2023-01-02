@@ -16,6 +16,7 @@ npm install @chengdx/shared
 - [createArray](src/create-array/index.md)
 - [createHandlers](src/create-handlers/index.md)
 - [formatNaming](src/format-naming/index.md)
+- groupArray
 - indexOfFirstLetter
 - indexOfFirstMacthes
 - isFunction
@@ -27,10 +28,12 @@ npm install @chengdx/shared
 - [match](src/match/index.md)
 - matchEvery
 - matchSome
+- mountGroup
 - [presets](src/presets/index.md)
 - [replaceSubstring](src/replace-substring/index.md)
 - resolveArray
 - resolveCallable
+- toArray
 <!-- FUNCTIONS END -->
 
 ### License

@@ -5,6 +5,7 @@ export default {
     'createArray',
     'createHandlers',
     'formatNaming',
+    'groupArray',
     'indexOfFirstLetter',
     'indexOfFirstMacthes',
     'isFunction',
@@ -16,8 +17,10 @@ export default {
     'match',
     'matchEvery',
     'matchSome',
+    'mountGroup',
     'replaceSubstring',
     'resolveArray',
     'resolveCallable',
+    'toArray',
   ],
 }
