@@ -8,6 +8,7 @@ import { getPackages } from './getPackages'
 const exclued: Package[] = [
   '@chengdx/default-export-resolver',
   '@chengdx/defa',
+  '@chengdx/shared',
 ]
 const packages = getPackages(pkg => !exclued.includes(pkg))
 

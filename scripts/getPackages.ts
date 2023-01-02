@@ -2,11 +2,18 @@ import fs from 'fs'
 import consola from 'consola'
 import type { MaybeCallable } from '@chengdx/shared'
 import { resolveCallable } from '@chengdx/shared'
+import { type Project, findWorkspacePackages } from '@pnpm/find-workspace-packages'
 import { dependencies } from '../package.json'
 
 export type Package = keyof typeof dependencies
 export function getPackages(filter?: (pkg: Package) => boolean): Package[] {
   return (Object.keys(dependencies) as Package[]).filter(filter ?? (() => true))
+}
+
+export async function get(filter?: (pkg: Project) => boolean) {
+  return (await findWorkspacePackages(process.cwd()))
+    .filter(pkg => pkg.manifest.name?.startsWith('@chengdx'))
+    .filter(filter ?? (() => true))
 }
 
 export function getFile(

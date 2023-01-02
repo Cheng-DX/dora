@@ -2,7 +2,7 @@ import fs from 'fs'
 import consola from 'consola'
 import parseArgs from 'minimist'
 import { capitalize } from '@chengdx/shared'
-import { getFile } from './getPackages'
+import { get, getFile } from './getPackages'
 
 type UpdateType = 'major' | 'minor' | 'patch'
 const { _: [type = 'patch'] } = parseArgs(process.argv.slice(2))
