@@ -1,0 +1,3 @@
+## is
+
+- type safed isFunction
