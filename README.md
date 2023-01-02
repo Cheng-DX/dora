@@ -17,6 +17,7 @@
 - [maybe-ref](./packages/maybe-ref/README.md): MaybeRef stuff
 - [defa](./packages/defa/README.md): Defu with right array merge strategy
 - [components](./packages/components/README.md): Vue.js components
+- [fs](./packages/fs/README.md): File system utils
 
 ## Install (Why not try [ni](https://github.com/antfu/ni))
 ```sh
