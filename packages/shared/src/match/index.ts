@@ -1,5 +1,5 @@
-import type { MaybeArray } from '../maybe-array'
-import { resolveArray } from '../maybe-array'
+import type { MaybeArray } from '../array/transform-to-array'
+import { resolveArray } from '../array/transform-to-array'
 import { type MaybeCallable, resolveCallable } from '../maybe-callable'
 
 export type Matcher<Args extends Array<any> = []> = RegExp | MaybeCallable<boolean, Args>

@@ -1,5 +1,5 @@
-import type { Matcher } from '..'
-import { match } from '..'
+import type { Matcher } from '../../match'
+import { match } from '../../match'
 
 export function charMatches(matcher: Matcher<[string]>) {
   return (char: string) => {

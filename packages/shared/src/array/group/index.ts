@@ -1,5 +1,5 @@
-import type { ArrayLike } from '..'
-import { toArray } from '..'
+import type { ArrayLike } from '../transform-to-array'
+import { toArray } from '../transform-to-array'
 
 export type GroupArrayCallback<T> = (
   element: T, index: number, array: T[]

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { toArray } from '.'
+import { resolveArray, toArray } from '.'
 
 describe('array like', () => {
   const arrayLike = {
@@ -23,5 +23,15 @@ describe('array like', () => {
     expect(result2).toEqual([2, 3, 4])
 
     expect(toArray(a)).toEqual([2, 3, undefined, undefined, 4])
+  })
+})
+
+describe('maybeArray', () => {
+  it('should return an array', () => {
+    const a = 'a'
+    const b = ['a', 'b']
+
+    expect(resolveArray(a)).toEqual(['a'])
+    expect(resolveArray(b)).toEqual(['a', 'b'])
   })
 })
