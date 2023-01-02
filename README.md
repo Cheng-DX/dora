@@ -1,11 +1,7 @@
-<br>
-
 <p align="center">
 <img width="100px" src="https://api.iconify.design/arcticons:pocket.svg?color=%230185cc"/>
 </p>
-
 <h1 align="center">Dora</h1>
-
 <p align="center">List of packages I used, it's my <code>Doraemon</code></p>
 
 ## Packages
@@ -24,5 +20,7 @@
 npm install @chengdx/[package-name]
 ```
 
+## changelog
+Full change log can be found [here](./CHANGELOG.md)
 
 [MIT](../LICENSE) License © 2022 [Cheng-DX](https://github.com/Cheng-DX)

@@ -44,6 +44,7 @@
     "@pnpm/find-workspace-packages": "^5.0.19",
     "@pnpm/logger": "^5.0.0",
     "@types/minimist": "^1.2.2",
+    "changelogen": "^0.4.0",
     "consola": "^2.15.3",
     "eslint": "^8.26.0",
     "minimist": "^1.2.7",
