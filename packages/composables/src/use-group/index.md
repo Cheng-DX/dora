@@ -1,3 +1,3 @@
 ## `useGroup`
 
-> Composable for managing groups.
+> Composable for Array.prototype.group
