@@ -1,6 +1,7 @@
 export * from './maybe-callable'
 export { default as presets } from './presets'
 export * from './match'
+export * from './match/create-matcher'
 export * from './create-handlers'
 export * from './is'
 export * from './array'

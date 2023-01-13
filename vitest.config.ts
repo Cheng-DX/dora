@@ -17,6 +17,7 @@ export default defineConfig({
       '@chengdx/use-echarts': resolve(__dirname, 'packages/use-echarts/src'),
       '@chengdx/naive-ui': resolve(__dirname, 'packages/naive-ui/src'),
       '@chengdx/fs': resolve(__dirname, 'packages/fs/src'),
+      '@chengdx/esbase': resolve(__dirname, 'packages/esbase/src'),
     },
   },
 })

@@ -73,3 +73,10 @@ matchEvery([
 matchSome(pureBoolMatcher) // true
 matchEvery(pureBoolMatcher) // true
 ```
+
+### use `createMacther`
+```ts
+const equalTo1 = createMatcher(x => x === 1)
+equalTo1.match(1) // true
+equalTo1.match(2) // false
+```

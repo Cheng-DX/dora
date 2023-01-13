@@ -40,6 +40,9 @@
       ],
       "@chengdx/fs": [
         "./packages/fs/src/index.ts"
+      ],
+      "@chengdx/esbase": [
+        "./packages/esbase/src/index.ts"
       ]
     }
   },
