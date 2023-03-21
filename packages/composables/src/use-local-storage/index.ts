@@ -59,7 +59,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): Ref<T> {
 
   watch(storage, (value, oldValue) => {
     setValue(value, oldValue)
-  })
+  }, { deep: true })
   useEventListener('storage', (event) => {
     if (event.key === key)
       storage.value = getValue()
